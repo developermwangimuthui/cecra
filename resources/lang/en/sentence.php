@@ -302,6 +302,7 @@ return [
                 'dishDetails'    => 'Product details',
                 'images'         => 'Product Images',
                 'success'        => 'Dish has been successfully modified!',
+                'deleted'        => 'Product has been deleted successfuly',
                 'uploadImage'    => 'Upload Image (jpg, png)',
                 'image'          => 'Image',
                 'edit'           => 'Edit Product',
@@ -316,7 +317,7 @@ return [
               'back' => 'Back'
             ]
         ],
-        'store'     => [
+        'store'=> [
             'label' => [
                 'manageStore'             => 'Restaurant Information',
                 'updateMessage'           => 'Shop has been successfully modified!',
@@ -362,6 +363,9 @@ return [
             ],
             'link' => [
                 'back' => 'Back'
+            ],
+            'message' => [
+                'deleted' => 'Producto Borrar Correctamente',
             ]
         ],
     ],

@@ -17557,6 +17557,7 @@
             var i = 1;
             var j = 1;
             jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', "#addcolor", function (e) {
+            console.log("ad color");
                 i++;
                 var color = "'color_".concat(i, "'");
                 jquery__WEBPACK_IMPORTED_MODULE_0___default()("#dyn_colors").append('<div style="display: flex" class="mb-2" id=' + color + '><input type="text" class="form-control " name="colors[]"><button data-color=' + color + ' class="delete-color"  type="button" style="background: red;border:none;outline:none;color:white" ' + myLabel.removeText + '>' + myLabel.removeText + '</button></div>');
@@ -17564,12 +17565,57 @@
                 j++;
                 var size = "'size_".concat(j, "'");
                 jquery__WEBPACK_IMPORTED_MODULE_0___default()("#dyn_sizes").append('<div style="display: flex" class="mb-2" id=' + size + '><input type="text" class="form-control " name="sizes[]"><button data-size=' + size + ' type="button" class="delete-size" style="background: red;border:none;outline:none;color:white" ' + myLabel.removeText + '>' + myLabel.removeText + '</button></div>');
-            }).on('click', '.delete-color', function (e) {
+            }).on('click', '.delete-color', function (e) {   
                 var color = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-color');
+
+
+                function isNumber(n) 
+                {
+                     return /^-?[\d.]+(?:e-?\d+)?$/.test(n);
+                    
+                } 
+                if(isNumber(color)){
+                        $.ajax({
+                   url:"/bus/shop/product/delete/color/"+color,
+                   type:'post',
+                   dataType:"json",
+                   success:function(data){
+                       
+                jquery__WEBPACK_IMPORTED_MODULE_0___default()('#color_' + color).remove();
+                    console.log(data);
+                   }
+                  })
+                }else{
+
+                console.log('delete-color'+color);
                 jquery__WEBPACK_IMPORTED_MODULE_0___default()('#' + color).remove();
+                }
+                             
             }).on('click', '.delete-size', function (e) {
+                console.log('deletesize');
                 var size = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-size');
+                function isNumber(n) 
+                {
+                     return /^-?[\d.]+(?:e-?\d+)?$/.test(n);
+                    
+                } 
+                if(isNumber(size)){
+                        $.ajax({
+                   url:"/bus/shop/product/delete/size/"+size,
+                   type:'post',
+                   dataType:"json",
+                   success:function(data){
+                       
+                jquery__WEBPACK_IMPORTED_MODULE_0___default()('#size_' + size).remove();
+                    console.log(data);
+                   }
+                  })
+                }else{
+
+                console.log('delete-size'+size);
                 jquery__WEBPACK_IMPORTED_MODULE_0___default()('#' + size).remove();
+                }
+                        
             }); // Update store form validation
 
             if ($frmShopProduct.length > 0 && validate) {

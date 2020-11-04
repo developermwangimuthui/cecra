@@ -94,6 +94,7 @@
                                                 <div style="display: flex" class="mb-2" id="color_{{ $color->vendor_product_color_id }}">
                                                     <input type="text" class="form-control" name="colors[]" value="{{ $color->product_color }}">
                                                     <button type="button" style="background: red;border:none;outline:none" data-color="{{ $color->vendor_product_color_id }}" class="delete-color">{{ trans('sentence.business.product.button.remove') }}</button>
+
                                                 </div>
                                             @endforeach
                                         </div>
@@ -107,7 +108,7 @@
                                             @foreach ($sizes as $size)
                                                 <div style="display: flex" class="mb-2" id="size_{{ $size->vendor_product_size_id }}">
                                                     <input type="text" class="form-control" name="sizes[]" value="{{ $size->product_size }}">
-                                                    <button type="button" style="background: red;border:none;outline:none" data-size="{{ $size->vendor_product_size_id }}" class="delete-size" >{{ trans('sentence.business.product.button.remove') }}</button>
+                                                    <button type="button" data-url="{{route('shop.product.delete.color', [$id])}}" style="background: red;border:none;outline:none" data-size="{{ $size->vendor_product_size_id }}" class="delete-size" >{{ trans('sentence.business.product.button.remove') }}</button>
                                                 </div>
                                             @endforeach
                                         </div>
@@ -149,7 +150,7 @@
                                                 </button>
                                             </td>
                                         </tr>
-                                        
+
                                         @php
                                             $imageRow++;
                                         @endphp
@@ -195,7 +196,7 @@
 //================
 function preview_image(ID)
 {
-    
+
      console.log(ID);
  var reader = new FileReader();
  reader.onload = function()

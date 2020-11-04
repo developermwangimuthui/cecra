@@ -63,9 +63,19 @@ Route::post('/bus/product/update/{id}',[\App\Http\Controllers\Seller\Shop\Produc
 Route::get('/bus/product',[\App\Http\Controllers\Seller\Shop\ProductController::class,'index'])->name('shop.product');
 Route::post('/bus/shop/product/store',[\App\Http\Controllers\Seller\Shop\ProductController::class,'store'])->name('shop.product.store');
 Route::post('/bus/shop/product/fetch-subcategories', [\App\Http\Controllers\Seller\Shop\ProductController::class, 'fetchChildCategory'])->name('shop.product.fetch-subcategories');
+// Delete Image
 Route::post('/bus/shop/product/delete/image/{id}', [
     \App\Http\Controllers\Seller\Shop\ProductController::class, 'deleteImage'
 ])->name('shop.product.delete.image');
+
+// Delete Color
+Route::post('/bus/shop/product/delete/color/{id}', [
+    \App\Http\Controllers\Seller\Shop\ProductController::class, 'deleteColor'
+])->name('shop.product.delete.color');
+// Delete Size
+Route::post('/bus/shop/product/delete/size/{id}', [
+    \App\Http\Controllers\Seller\Shop\ProductController::class, 'deleteSize'
+])->name('shop.product.delete.size');
 
 Route::get('/bus/deleteProduct/{id}',[BusinessUserController::class,'deleteProduct'])->name('bus/deleteProduct');
 

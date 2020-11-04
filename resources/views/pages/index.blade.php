@@ -15,7 +15,7 @@
                     <div class="profile-widget">
                         <div class="doc-img">
                             <h3 class="title text-center">
-                                <a href="product.php">Iphone</a> 
+                                <a href="product.php">Iphone</a>
                             </h3>
                             <a href="product.php">
                                 <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/1118.jpg') }}">
@@ -47,7 +47,7 @@
                     <div class="profile-widget">
                         <div class="doc-img">
                             <h3 class="title text-center">
-                                <a href="product.php">Nokia 2</a> 
+                                <a href="product.php">Nokia 2</a>
                             </h3>
                             <a href="product.php">
                                 <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{ URL::asset('assets/images/pro/1112.jpg') }}">
@@ -79,7 +79,7 @@
                     <div class="profile-widget">
                         <div class="doc-img">
                             <h3 class="title text-center">
-                                <a href="product.php">Mack book</a> 
+                                <a href="product.php">Mack book</a>
                             </h3>
                             <a href="product.php">
                                 <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/1113.jpg') }}">
@@ -111,7 +111,7 @@
                     <div class="profile-widget">
                         <div class="doc-img">
                             <h3 class="title text-center">
-                                <a href="product.php">Chicken Pizza</a> 
+                                <a href="product.php">Chicken Pizza</a>
                             </h3>
                             <a href="product.php">
                                 <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{ URL::asset('assets/images/pro/1117.jpg') }}">
@@ -143,7 +143,7 @@
                     <div class="profile-widget">
                         <div class="doc-img">
                             <h3 class="title text-center">
-                                <a href="product.php">Mack book</a> 
+                                <a href="product.php">Mack book</a>
                             </h3>
                             <a href="product.php">
                                 <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{ URL::asset('assets/images/pro/1114.jpg') }}">
@@ -175,7 +175,7 @@
                     <div class="profile-widget">
                         <div class="doc-img">
                             <h3 class="title text-center">
-                                <a href="product.php">Gaming device</a> 
+                                <a href="product.php">Gaming device</a>
                             </h3>
                             <a href="product.php">
                                 <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{ URL::asset('assets/images/pro/controller.jpg') }}">
@@ -736,7 +736,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">juicy joy</a> 
+                                    <a href="doctor-profile.html">juicy joy</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/v1.png') }}">
@@ -767,7 +767,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Bicycle</a> 
+                                    <a href="doctor-profile.html">Bicycle</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/v2.jpg') }}">
@@ -798,7 +798,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Simons</a> 
+                                    <a href="doctor-profile.html">Simons</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/v3.png') }}">
@@ -824,12 +824,12 @@
                             </div>
                         </div>
                         <!-- /Doctor Widget -->
-                        
+
                         <!-- Doctor Widget -->
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Excellent</a> 
+                                    <a href="doctor-profile.html">Excellent</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/v5.png') }}">
@@ -860,7 +860,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Simmons</a> 
+                                    <a href="doctor-profile.html">Simmons</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/v4.png') }}">
@@ -887,13 +887,13 @@
                         </div>
                         <!-- /Doctor Widget -->
 
-                        
+
 
                         <!-- Doctor Widget -->
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Watch shop</a> 
+                                    <a href="doctor-profile.html">Watch shop</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/v7.jpg') }}">
@@ -942,7 +942,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Line taste</a> 
+                                    <a href="doctor-profile.html">Line taste</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/r2.jpg') }}">
@@ -973,7 +973,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Fine Pizza</a> 
+                                    <a href="doctor-profile.html">Fine Pizza</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/r3.jpg') }}">
@@ -1004,7 +1004,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Green foods</a> 
+                                    <a href="doctor-profile.html">Green foods</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/r4.jpg') }}">
@@ -1035,7 +1035,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Good Sweets</a> 
+                                    <a href="doctor-profile.html">Good Sweets</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/r5.jpg') }}">
@@ -1066,7 +1066,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Simmons</a> 
+                                    <a href="doctor-profile.html">Simmons</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/r6.jpg') }}">
@@ -1099,7 +1099,7 @@
                         <div class="profile-widget">
                             <div class="doc-img">
                                 <h3 class="title text-center">
-                                    <a href="doctor-profile.html">Great hotel</a> 
+                                    <a href="doctor-profile.html">Great hotel</a>
                                 </h3>
                                 <a href="doctor-profile.html">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/pro/r7.jpg') }}">
@@ -1147,23 +1147,23 @@
                                 <div class="dashv"></div>
                                 <h5>RESTAURANTS</h5>
                                 <p class="h6 text-muted">Find specialized or local restaurants to serve you.</p>
-                            </div> 
+                            </div>
                         </div>
-                    
+
                         <div class="col-md-4">
                             <div class="my-4 p-4 border-left">
                                 <div class="dashv"></div>
                                 <h5>BUSINESSES</h5>
                                 <p class="h6 text-muted">Expand your Business with us to create account.</p>
-                            </div> 
+                            </div>
                         </div>
-                    
+
                         <div class="col-md-4">
                             <div class="my-4 p-4 border-left">
                                 <div class="dashv"></div>
                                 <h5>SHOPS</h5>
                                 <p class="h6 text-muted">Sale your shop products online on cerca di mi.</p>
-                            </div> 
+                            </div>
                         </div>
                 </div>
             </div>

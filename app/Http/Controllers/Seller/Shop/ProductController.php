@@ -341,6 +341,7 @@ class ProductController extends App\Http\Controllers\Seller\SellerController {
     }
     public function delete($id) {
         // return $id;
+
         VendorProductColor::where('vendor_product_id', $id)->delete();
         VendorProductSize::where('vendor_product_id', $id)->delete();
         VendorProduct::FindorFail($id)->delete();
@@ -349,8 +350,9 @@ class ProductController extends App\Http\Controllers\Seller\SellerController {
 
 
 
-        // session()->flash('message', trans('sentence.restaurant.menu.label.success'));
-        return redirect()->back()->with('message', trans('sentence.restaurant.menu.label.Product deleted successfully'));
+        session()->flash('message', trans('sentence.restaurant.menu.label.deleted'));
+        return redirect()->route('shop.product');
+        // return redirect()->back()->with('message', trans('sentence.restaurant.menu.label.deleted'));
     }
 
     /**
@@ -386,6 +388,32 @@ class ProductController extends App\Http\Controllers\Seller\SellerController {
             $image = \App\Models\Image::find($request->get('id'));
             $image->delete();
             return response()->json(['status' => 'success'],200);
+        }
+    }
+
+
+    // Delete Color
+     /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function deleteColor(Request $request,$color) {
+        if($request->ajax()) {
+            $color = VendorProductColor::where('vendor_product_color_id',$color)->delete();
+            // $color->delete();
+            return response()->json(['success' => 'Color deleted'],200);
+        }
+    }
+    // Delete Size
+     /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function deleteSize(Request $request,$size) {
+        if($request->ajax()) {
+            $size = VendorProductSize::where('vendor_product_size_id',$size)->delete();
+            // $color->delete();
+            return response()->json(['success' => 'Size deleted'],200);
         }
     }
 }

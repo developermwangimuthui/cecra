@@ -375,6 +375,9 @@ return [
             ],
             'link' => [
                 'back' => 'Atras'
+            ],
+            'product' => [
+                'deleted'=> 'Producto Borrar Correctamente',
             ]
         ],
     ],

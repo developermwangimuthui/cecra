@@ -216,7 +216,7 @@
 
                             <div style="display: flex;justify-content: flex-end">
                                 <button class="btn btn-primary"><i class="fas fa-save"></i>&nbsp;{{ trans('sentence.restaurant.menu.button.save') }}</button>&nbsp;
-                                <a href="{{$back}}" class="btn btn-primary rounded"><i class="fa fa-arrow-alt-circle-left"></i> {{ trans('sentence.restaurant.menu.link.back') }}</a>
+                                <a href="{{route('shop.product')}}" class="btn btn-primary rounded"><i class="fa fa-arrow-alt-circle-left"></i> {{ trans('sentence.restaurant.menu.link.back') }}</a>
                             </div>
                         @csrf
                     </form>
