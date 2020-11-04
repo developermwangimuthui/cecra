@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.contenido .imagenprincipal .textoimagenprincipal {
+    color: #FFFFFF;
+    position: absolute;
+    left: 319px;
+    top: 192px;
+    text-align: center;
+}
