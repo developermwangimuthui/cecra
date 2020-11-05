@@ -278,7 +278,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center form_container">
-                        {{--  <form action="{{ route('bus/logincheck') }}" method="POST">  --}}
+                        
                         <form action="/bus/reset-password" method="POST">
                             @csrf
                             <input type="hidden" name="token" value="{{ $token }}">

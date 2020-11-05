@@ -27,7 +27,7 @@
             <div class="row justify-content-center">
                 <div class="table-responsive">
 
-                    <table class="table table-striped mt-2 datatable">
+                    <table  class="table table-striped mt-2 datatable">
                         <thead>
                         <tr class="takfua-back">
                             <th class="text-center" style="width: 2%;">
