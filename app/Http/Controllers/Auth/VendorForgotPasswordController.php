@@ -27,15 +27,15 @@ class VendorForgotPasswordController extends Controller
             'email' => 'required|email',
         ]);
 
-        // dd($request);
+        // // dd($request);
         // dd($request->email);
         $email = $request->email;
 
         $exists = Vendor::where('raw_email', $email)->first();
 
-        // dd($exists->raw_email);
-
-
+        // dd($exists);
+        if ($exists != null) {
+            # code...
         $token = Str::random(60);
 
         DB::table('password_resets')->insert(
@@ -48,7 +48,15 @@ class VendorForgotPasswordController extends Controller
             $message->subject('Reset Password Notification');
         });
 
-        Notification::route('mail', $request->email)->notify(new VendorResetPassword($token));
+        // Notification::route('mail', $request->email)->notify(new VendorResetPassword($token));
+        } else {
+
+
+        return redirect()->back()->with('msg', 'Email does not exist');
+        }
+
+
+
 
         return redirect()->back()->with('msg', 'We have e-mailed your password reset link!');
     }
