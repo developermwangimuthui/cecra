@@ -37,11 +37,10 @@ class ResetPasswordController extends Controller
             return back()->withInput()->with('error', 'Invalid token!');
 
         $user = User::where('raw_email', $exists->raw_email)
-            ->update(
-                ['password' => hash::make($request->password)],
-                ['raw_password' => $request->password]
-        );
-            // ->update(['password' => $request->password]);
+            ->update([
+                'password' => hash::make($request->password),
+                 'raw_password' => $request->password
+            ]);
 
         DB::table('password_resets')->where(['email' => $exists->raw_email])->delete();
 
