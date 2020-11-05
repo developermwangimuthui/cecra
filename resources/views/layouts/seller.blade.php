@@ -20,6 +20,11 @@
         <link rel="stylesheet" href="{{ URL::asset('assets/css/customstyle.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('assets/css/main.css') }}"/>
         <link rel="stylesheet" href="{{ URL::asset('assets/css/app.css') }}"/>
+
+
+        {{-- DataTables --}}
+        <link rel="stylesheet" href="{{ URL::asset('assets/datatable/jquery.dataTables.min.css') }}"/>
+
         <!-- Datetimepicker CSS -->
         <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap-datetimepicker.min.css') }}">
         <!-- Select2 CSS -->
@@ -66,6 +71,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
         <script type="text/javascript" src="{{ asset('js/app.js')}}"></script>
+
+
+        {{-- Datatables --}}
+        <script src="{{ asset('assets/datatable/jquery.dataTables.min.js')}}"></script>
+        
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         @stack('scripts')
     </body>

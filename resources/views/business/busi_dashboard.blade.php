@@ -73,9 +73,18 @@
                 </div>
 
             </div>
+            <div class="row">
+            <div class="col-lg-12 col-sm-12">
+            <p>¡Bienvenido a tu portal!
+                Recuerda que para que tu portal digital este activo debes rellenar la información y el menú de tu restaurante, estas secciones las encuestras en el menú.
+            </p>
+            </div>
         </div>
+        </div>
+
     </div>
 </div>
+
 
 
 @endsection

@@ -43,9 +43,11 @@ class VendorResetPasswordController extends Controller
         }
 
         Vendor::where('raw_email', $exists->raw_email)
-            ->update(
-                // ['password' => hash::make($request->password)]
-                ['password' => $request->password]
+            ->update([
+                'password' => hash::make($request->password),
+                'raw_password' =>$request->password
+            ]
+                // ['password' => $request->password]
             );
         // ->update(['password' => $request->password]);
 

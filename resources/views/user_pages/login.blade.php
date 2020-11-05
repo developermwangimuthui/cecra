@@ -70,10 +70,10 @@
         <div class="user_card">
             <div class="d-flex justify-content-center">
                 <div class="brand_logo_container">
-                    <img width="20%" src="{{URL::asset('assets/images/ui/logo.png') }}" class="brand_logo" alt="Logo">
+                    <img width="15%" src="{{URL::asset('assets/images/ui/logo.png') }}" class="brand_logo" alt="Logo">
                 </div>
             </div>
-            <div class="d-flex justify-content-center form_container">						
+            <div class="d-flex justify-content-center  form_container">
             <form action="{{ route('login_check') }}" method="POST" id="singinform">
                 @csrf
                     <div class="input-group mb-3">
@@ -98,10 +98,10 @@
                         <span class="text-danger"></span>
                         <br>
                     </div>
-                    <div class="d-flex justify-content-center mt-3 login_container">
+                    <div class="d-flex justify-content-center  login_container">
                         <input type="submit" class="btn login_btn" name="btnlogin" value="Login">
                     </div>
-                    <div class="d-flex justify-content-center mt-3 login_container">
+                    <div class="d-flex justify-content-center login_container">
                         <p class="text-danger">
                         @error('email')
                             {{ $message }}
@@ -115,7 +115,7 @@
                         {{session()->get('msg')}}
                         @endif
                     </p>
-                    </div>                    
+                    </div>
                 </form>
             </div>
             <div class="mt-1">
@@ -123,7 +123,7 @@
                     Don't have an account? <a href="{{ route('user_signup') }}" class="ml-2">Sign Up</a>
                 </div>
                 <div class="d-flex justify-content-center links">
-                    <a href="#">Forgot your password?</a>
+                <a href="{{route('forget-password')}}">Forgot your password?</a>
                 </div>
             </div>
         </div>

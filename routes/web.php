@@ -202,58 +202,6 @@ Route::get('/how-to-create-your-business', [
 ])->name('how-to-create-your-business');
 
 // password reset
-/* Route::get('/forgot-password', function () {
-    // return view('Auth.forgot-password');
-    return view('Auth.reset-password');
-
-})->middleware(['guest'])->name('password.request');
-
-
-
-Route::post('/forgot-password', function (Request $request) {
-    $request->validate(['email' => 'required|email']);
-
-    // dd($request->email);
-
-    $status = Password::sendResetLink(
-        $request->only('email')
-    );
-
-    return $status === Password::RESET_LINK_SENT
-        ? back()->with(['status' => __($status)])
-        : back()->withErrors(['email' => __($status)]);
-})->middleware(['guest'])->name('password.email');
-
-Route::get('/reset-password/{token}', function ($token) {
-    return view('Auth.reset-password', ['token' => $token]);
-})->middleware(['guest'])->name('password.reset');
-
-// handling Form submission
-Route::post('/reset-password', function (Request $request) {
-    $request->validate([
-        'token' => 'required',
-        'email' => 'required|email',
-        'password' => 'required|confirmed',
-    ]);
-
-    $status = Password::reset(
-        $request->only('email', 'password', 'password_confirmation', 'token'),
-        function ($user, $password) use ($request) {
-            $user->forceFill([
-                'password' => Hash::make($password)
-            ])->save();
-
-            $user->setRememberToken(Str::random(60));
-
-            event(new PasswordReset($user));
-        }
-    );
-
-    return $status == Password::PASSWORD_RESET
-        ? redirect()->route('user_login')->with('status', __($status))
-        : back()->withErrors(['email' => __($status)]);
-})->middleware(['guest'])->name('password.update');
- */
 
 // -----------------------------User forget password ------------------------------
 Route::get('/forget-password', [
@@ -292,10 +240,6 @@ Route::post('/bus/reset-password', [
     App\Http\Controllers\Auth\VendorResetPasswordController::class, 'updateVendorPassword'
 ])->name('V_reset-password');
 
-/* Route::get('forget-password', 'App\Http\Controllers\Auth\ForgotPasswordController@getEmail')->name('forget-password');
-Route::post('forget-password', 'App\Http\Controllers\Auth\ForgotPasswordController@postEmail')->name('forget-password');
-Route::get('reset-password/{token}', 'App\Http\Controllers\Auth\ResetPasswordController@getPassword');
-Route::post('reset-password', 'App\Http\Controllers\Auth\ResetPasswordController@updatePassword');
-*/
+
 
 
