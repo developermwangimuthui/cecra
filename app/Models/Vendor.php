@@ -4,11 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use DB;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\CanResetPassword;
+use App\Notifications\ResetPassword as ResetPasswordNotification;
 
 class Vendor extends Model
 {
     use HasFactory;
+    use Notifiable;
+
+    
     protected $primaryKey = 'vendor_id';
     protected $table = 'vendors';
     protected $guarded = [];
@@ -43,6 +49,11 @@ class Vendor extends Model
     public function checkLogin($email,$password){
         $login = DB::select("select * from vendors where raw_email=? and raw_password=?",[$email,$password]);
         return $login;
+    }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
     }
 
 }

@@ -278,55 +278,37 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center form_container">
-                        <form action="{{ route('bus/logincheck') }}" method="POST">
+                        <form action="{{ route('forget-password') }}" method="Post">
                             @csrf
+                            <label for="email" class="form-label">{{trans('sentence.signup.email')}}</label>
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                 </div>
                                 <input type="text" name="email" class="form-control input_user" value="" placeholder="{{trans('sentence.signup.email')}}" required>
                             </div>
-                            <div class="input-group mb-2">
-                                <div class="input-group-append">
-                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
-                                </div>
-                                <input type="password" name="password" class="form-control input_pass" value="" placeholder="{{trans('sentence.signup.password')}}" required>
-                            </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" name="rememberme" id="customControlInline">
-                                    <label class="custom-control-label" for="customControlInline">{{trans('sentence.signin.rememberMe')}}</label>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center mt-1 login_container">
-								<input type="submit" class="btn login_btn" name="btnlogin" value="{{trans('sentence.signin.loginButton')}}">
-                            </div>                    <div class="d-flex justify-content-center mt-3 login_container">
-                                <p class="text-danger">
-                                @error('email')
-                                    {{ $message }}
-                                @enderror
-                                <br/>
-                                @error('password')
-                                    {{ $message }}
-                                @enderror
 
-                                @if(session()->has('msg'))
-                                {{session()->get('msg')}}
-                                @endif
-                            </p>
+
+                            <div class="d-flex justify-content-center mt-1 login_container">
+
+                                    <input type="submit" class="btn login_btn"  value="Email Reset Password">
+
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 login_container">
+                                <p class="text-danger">
+                                    @error('email')
+                                        {{ $message }}
+                                    @enderror
+                                    <br/>
+                                    @if(session()->has('msg'))
+                                    {{session()->get('msg')}}
+                                    @endif
+                                </p>
                             </div>
 
                         </form>
                     </div>
 
-                    <div class="">
-                        <div class="d-flex justify-content-center links">
-                            {{trans('sentence.signin.dontHaveAnAccount')}} <a href="{{ route('bus/signup') }}" class="ml-2">{{trans('sentence.signup.text')}}</a>
-                        </div>
-                        <div class="d-flex justify-content-center links">
-                            <a href="{{route('V_forget-password')}}">{{trans('sentence.Forgot_your_password')}}</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

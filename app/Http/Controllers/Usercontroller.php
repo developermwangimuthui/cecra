@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\PasswordReseting;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\facades\Hash;
 
 
-class Usercontroller extends Controller
-{
+class Usercontroller extends Controller{
     public function login(){
         return view('user_pages.login');
     }

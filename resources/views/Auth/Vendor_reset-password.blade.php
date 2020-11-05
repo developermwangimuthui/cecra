@@ -272,35 +272,62 @@
         <div class="container h-100 pt-150 mb-100" style="">
             <div class="d-flex justify-content-center h-100">
                 <div class="user_card">
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center mb-5">
                         <div class="brand_logo_container">
-                            <img width="20%" src="{{URL::asset('assets/images/ui/logo.png')}}" class="brand_logo" alt="Logo">
+                            <img width="15%" src="{{URL::asset('assets/images/ui/logo.png')}}" class="brand_logo" alt="Logo">
                         </div>
                     </div>
                     <div class="d-flex justify-content-center form_container">
-                        <form action="{{ route('bus/logincheck') }}" method="POST">
+                        {{--  <form action="{{ route('bus/logincheck') }}" method="POST">  --}}
+                        <form action="/bus/reset-password" method="POST">
                             @csrf
+                            <input type="hidden" name="token" value="{{ $token }}">
+
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                 </div>
                                 <input type="text" name="email" class="form-control input_user" value="" placeholder="{{trans('sentence.signup.email')}}" required>
                             </div>
-                            <div class="input-group mb-2">
-                                <div class="input-group-append">
-                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            {{--  Password  --}}
+                            <div class="">
+                                <div class="form-group">
+                                    <label for="">{{trans('sentence.signup.password')}}<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <input id="input-password" type="password" class="form-control  @error('password') is-valid @enderror" name="password"  autocomplete="new-password" required />
+                                    </div>
+
+                                    @error('password')
+                                    <span class="text-danger"><i class="fas fa-info-circle"></i> {{ $message }}</span>
+                                    @enderror
                                 </div>
-                                <input type="password" name="password" class="form-control input_pass" value="" placeholder="{{trans('sentence.signup.password')}}" required>
                             </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" name="rememberme" id="customControlInline">
-                                    <label class="custom-control-label" for="customControlInline">{{trans('sentence.signin.rememberMe')}}</label>
+                            <div class="">
+                                <div class="form-group">
+                                    <label for="">{{trans('sentence.signup.confirmPassword')}}<span class="text-danger">*</span></label>
+                                     <div class="input-group mb-3">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <input id='inputcfm' type="password" class="form-control @error('cnfmpassword') is-invalid @enderror" name="cnfmpassword" autocomplete="new-password" required />
+                                     </div>
+                                    @error('cnfmpassword')
+                                    <span class="text-danger"><i class="fas fa-info-circle"></i> {{ $message }}</span>
+                                    @enderror
+                                    @if(session()->has('cpass_msg'))
+                                    <span class="text-danger"><i class="fas fa-info-circle"></i> {{session()->get('cpass_msg')}}</span>
+                                    @endif
                                 </div>
                             </div>
+
                             <div class="d-flex justify-content-center mt-1 login_container">
-								<input type="submit" class="btn login_btn" name="btnlogin" value="{{trans('sentence.signin.loginButton')}}">
-                            </div>                    <div class="d-flex justify-content-center mt-3 login_container">
+                                 <input onclick="myFunction()" type="submit" class="btn login_btn" name="btnlogin" value="Reset Password">
+                                {{-- <button onclick="myFunction()" class="btn btn-primary btn-sm submit">listen</button> --}}
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 login_container">
                                 <p class="text-danger">
                                 @error('email')
                                     {{ $message }}
@@ -319,15 +346,21 @@
                         </form>
                     </div>
 
-                    <div class="">
-                        <div class="d-flex justify-content-center links">
-                            {{trans('sentence.signin.dontHaveAnAccount')}} <a href="{{ route('bus/signup') }}" class="ml-2">{{trans('sentence.signup.text')}}</a>
-                        </div>
-                        <div class="d-flex justify-content-center links">
-                            <a href="{{route('V_forget-password')}}">{{trans('sentence.Forgot_your_password')}}</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
         @include('includes/footer')
+
+        <script type="text/javascript">
+        function myFunction(){
+            var pass = document.getElementById('input-password').value;
+            console.log(pass);
+
+            var passcfm = document.getElementById('inputcfm').value;
+            console.log(passcfm);
+        }
+
+
+
+        </script>
