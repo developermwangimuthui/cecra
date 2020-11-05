@@ -33,26 +33,35 @@ class VendorResetPasswordController extends Controller
         // dd($request->password);
 
 
-        $updatePassword = DB::table('password_resets')
+        if ($exists) {
+            $updatePassword = DB::table('password_resets')
             ->where(['email' => $exists->raw_email, 'token' => $request->token])
             ->first();
 
-        if (!$updatePassword) {
-
-            return back()->withInput()->with('error', 'Invalid token!');
+            if (!$updatePassword) {
+                return back()->withInput()->with('error', 'Invalid token!');
+            }
+        } else {
+            return redirect()->back()->withInput()->with('msg', 'Email doesnot exist');
         }
 
-        Vendor::where('raw_email', $exists->raw_email)
-            ->update([
-                'password' => hash::make($request->password),
-                'raw_password' =>$request->password
-            ]
-                // ['password' => $request->password]
-            );
-        // ->update(['password' => $request->password]);
+        if ($request->password == $request->cnfmpassword){
 
-        DB::table('password_resets')->where(['email' => $exists->raw_email])->delete();
+            Vendor::where('raw_email', $exists->raw_email)
+                ->update([
+                    'password' => hash::make($request->password),
+                    'raw_password' =>$request->password
+                ]
+                    // ['password' => $request->password]
+                );
+            // ->update(['password' => $request->password]);
 
-        return redirect('bus/signin')->with('msg', 'Your password has been changed!');
+            DB::table('password_resets')->where(['email' => $exists->raw_email])->delete();
+
+            return redirect('bus/signin')->with('msg', 'Your password has been changed!');
+
+        }else {
+            return redirect()->back()->withInput()->with('msg', 'Passwords do not match');
+        }
     }
 }

@@ -269,14 +269,31 @@
         <div style="box-shadow: 2px 2px 12px lightblue;">
             @include('includes.navbar')
         </div>
+        <div class="d-flex justify-content-center py-2 ">
+            @if(session()->has('msg'))
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{session()->get('msg')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+            @endif
+
+        </div>
         <div class="container h-100 pt-150 mb-100" style="">
+
             <div class="d-flex justify-content-center h-100">
+
+
                 <div class="user_card">
-                    <div class="d-flex justify-content-center mb-5">
+
+                    <div class="d-flex justify-content-center mb-5 ">
                         <div class="brand_logo_container">
                             <img width="15%" src="{{URL::asset('assets/images/ui/logo.png')}}" class="brand_logo" alt="Logo">
                         </div>
                     </div>
+
                     <div class="d-flex justify-content-center form_container">
                         {{--  <form action="{{ route('bus/logincheck') }}" method="POST">  --}}
                         <form action="/reset-password" method="POST">
@@ -323,25 +340,11 @@
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-center mt-1 login_container">
+                            <div class="d-flex justify-content-center mb-5 login_container">
                                  <input onclick="myFunction()" type="submit" class="btn login_btn" name="btnlogin" value="Reset Password">
                                 {{-- <button onclick="myFunction()" class="btn btn-primary btn-sm submit">listen</button> --}}
                             </div>
-                            <div class="d-flex justify-content-center mt-3 login_container">
-                                <p class="text-danger">
-                                @error('email')
-                                    {{ $message }}
-                                @enderror
-                                <br/>
-                                @error('password')
-                                    {{ $message }}
-                                @enderror
 
-                                @if(session()->has('msg'))
-                                {{session()->get('msg')}}
-                                @endif
-                            </p>
-                            </div>
 
                         </form>
                     </div>

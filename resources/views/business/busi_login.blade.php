@@ -269,10 +269,21 @@
         <div style="box-shadow: 2px 2px 12px lightblue;">
             @include('includes.navbar')
         </div>
+          <div class="d-flex justify-content-center py-2 ">
+            @if(session()->has('msg'))
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{session()->get('msg')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+            @endif
+        </div>
         <div class="container h-100 pt-150 mb-100" style="">
             <div class="d-flex justify-content-center h-100">
                 <div class="user_card">
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center ">
                         <div class="brand_logo_container">
                             <img width="20%" src="{{URL::asset('assets/images/ui/logo.png')}}" class="brand_logo" alt="Logo">
                         </div>
@@ -286,7 +297,7 @@
                                 </div>
                                 <input type="text" name="email" class="form-control input_user" value="" placeholder="{{trans('sentence.signup.email')}}" required>
                             </div>
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-3">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fa fa-key"></i></span>
                                 </div>
@@ -300,27 +311,14 @@
                             </div>
                             <div class="d-flex justify-content-center mt-1 login_container">
 								<input type="submit" class="btn login_btn" name="btnlogin" value="{{trans('sentence.signin.loginButton')}}">
-                            </div>                    <div class="d-flex justify-content-center mt-3 login_container">
-                                <p class="text-danger">
-                                @error('email')
-                                    {{ $message }}
-                                @enderror
-                                <br/>
-                                @error('password')
-                                    {{ $message }}
-                                @enderror
-
-                                @if(session()->has('msg'))
-                                {{session()->get('msg')}}
-                                @endif
-                            </p>
                             </div>
+
 
                         </form>
                     </div>
 
                     <div class="">
-                        <div class="d-flex justify-content-center links">
+                        <div class="d-flex justify-content-center mb-2 links">
                             {{trans('sentence.signin.dontHaveAnAccount')}} <a href="{{ route('bus/signup') }}" class="ml-2">{{trans('sentence.signup.text')}}</a>
                         </div>
                         <div class="d-flex justify-content-center links">

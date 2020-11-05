@@ -28,22 +28,39 @@ class ResetPasswordController extends Controller
 
         $exists = User::where('raw_email', $email)->first();
 
-
-        $updatePassword = DB::table('password_resets')
+        if ($exists) {
+            $updatePassword = DB::table('password_resets')
             ->where(['email' => $exists->raw_email, 'token' => $request->token])
             ->first();
 
-        if (!$updatePassword)
-            return back()->withInput()->with('error', 'Invalid token!');
+            if (!$updatePassword) {
+                return back()->withInput()->with('error', 'Invalid token!');
+            }
 
-        $user = User::where('raw_email', $exists->raw_email)
-            ->update([
-                'password' => hash::make($request->password),
-                 'raw_password' => $request->password
-            ]);
 
-        DB::table('password_resets')->where(['email' => $exists->raw_email])->delete();
+        }else {
+            return redirect()->back()->withInput()->with('msg', 'Email doesnot exist');
+        }
 
-        return redirect('/user_login')->with('msg', 'Your password has been changed!');
+
+                // dd($request->password);
+                // dd($request->cnfmpassword);
+
+                if ($request->password == $request->cnfmpassword) {
+                    $user = User::where('raw_email', $exists->raw_email)
+                    ->update([
+                        'password' => hash::make($request->password),
+                        'raw_password' => $request->password
+                    ]);
+
+                    DB::table('password_resets')->where(['email' => $exists->raw_email])->delete();
+
+                    return redirect('/user_login')->with('msg', 'Your password has been changed!');
+
+
+                }else {
+                    return redirect()->back()->withInput()->with('msg', 'Passwords do not match');
+                }
+
     }
 }
