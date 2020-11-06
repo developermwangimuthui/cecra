@@ -41,10 +41,12 @@ class VendorResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Your Reset Password Subject Here')
-            ->line('You are receiving this email because we received a password reset request for your account.')
-            ->action('Reset Password', route('V_show-reset_form', $this->token))
-            ->line('If you did not request a password reset, no further action is required.');
+            ->greeting('Estimado cliente,')
+            ->subject('Restablecer Contraseña')
+            ->line('Hemos recibido una petición para restablecer la contraseña de tu cuenta.')
+            ->action('Restablecer Contraseña', route('V_show-reset_form', $this->token))
+            ->line('En caso de que no hayas hecho está petición no es necesario hacer nada.')
+            ->salutation('Saludos,');
     }
 
     /**

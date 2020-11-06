@@ -41,7 +41,9 @@
 
 {{-- Salutation --}}
 @if (! empty($salutation))
-{{ $salutation }}
+{{ $salutation }}<br>
+@lang('Equipo de soporte de Cerca De Mi España')
+
 @else
 @lang('Regards'),<br>
 {{ config('app.name') }}
@@ -51,12 +53,28 @@
 @isset($actionText)
 @slot('subcopy')
 @lang(
-    "If you’re having trouble clicking the \":actionText\" button, copy and paste the URL below\n".
-    'into your web browser:',
+    "En caso de que tengas problemas para acceder al link en el botón  \":actionText\", puedes copiar y pegar el enlace de abajo en tu navegador:\n".
+    // 'into your web browser:',
+    "<br>",
     [
         'actionText' => $actionText,
     ]
 ) <span class="break-all">[{{ $displayableActionUrl }}]({{ $actionUrl }})</span>
+
+@lang(
+
+    "No respondas a este correo electrónico. Para ponerte en contacto con nosotros, haz clic en Contacto en nuestra web.\n".
+    '<br>',
+
+)
+
+@lang(
+
+
+    "Este es un correo transaccional.",
+
+
+)
 @endslot
 @endisset
 @endcomponent
