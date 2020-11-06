@@ -36,8 +36,8 @@ class ForgotPasswordController extends Controller
             $exists = User::where('raw_email', $email)->first();
 
             // dd($exists->raw_email);
-
-
+        if ($exists != null) {
+            # code...
             $token = Str::random(60);
 
             DB::table('password_resets')->insert(
@@ -53,6 +53,11 @@ class ForgotPasswordController extends Controller
             Notification::route('mail', $request->email)->notify(new ResetPassword($token));
 
             return redirect()->back()->with('msg', 'We have e-mailed your password reset link!');
+        }else{
+
+            return redirect()->back()->with('msg', 'Email does not exist');
+        }
+
 
     }
 

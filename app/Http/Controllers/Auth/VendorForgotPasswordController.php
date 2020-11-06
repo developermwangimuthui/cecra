@@ -41,7 +41,10 @@ class VendorForgotPasswordController extends Controller
         DB::table('password_resets')->insert(
             ['email' => $exists->raw_email, 'token' => $token, 'created_at' => Carbon::now()]
         );
+        return redirect()->back()->with('msg', 'We have e-mailed your password reset link!');
 /*
+
+
         Mail::send('Auth.verify', ['token' => $token], function ($message) use ($exists) {
             $message->from('Cercademi.me@gmail.com');
             $message->to($exists->raw_email);
@@ -56,8 +59,5 @@ class VendorForgotPasswordController extends Controller
         }
 
 
-
-
-        return redirect()->back()->with('msg', 'We have e-mailed your password reset link!');
     }
 }
