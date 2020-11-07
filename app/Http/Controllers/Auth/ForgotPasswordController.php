@@ -49,10 +49,11 @@ class ForgotPasswordController extends Controller
                     $message->to($exists->raw_email);
                     $message->subject('Reset Password Notification');
                 }); */
+            
 
             Notification::route('mail', $request->email)->notify(new ResetPassword($token));
 
-            return redirect()->back()->with('msg', 'We have e-mailed your password reset link!');
+            return redirect()->back()->with('msg', '¡Hemos enviado un correo electrónico con el enlace de restablecimiento de contraseña!');
         }else{
 
             return redirect()->back()->with('msg', 'Email does not exist');
