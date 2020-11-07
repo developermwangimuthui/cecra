@@ -44,11 +44,7 @@ class ForgotPasswordController extends Controller
                 ['email' => $exists->raw_email, 'token' => $token, 'created_at' => Carbon::now()]
             );
 
-           /*  Mail::send('Auth.verify',['token' => $token], function($message) use ($exists) {
-                    $message->from('Cercademi.me@gmail.com');
-                    $message->to($exists->raw_email);
-                    $message->subject('Reset Password Notification');
-                }); */
+
 
             Notification::route('mail', $request->email)->notify(new ResetPassword($token));
 

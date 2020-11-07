@@ -46,7 +46,6 @@ class ResetPassword extends Notification
             ->greeting('Estimado cliente,')
             ->subject('Restablecer Contraseña')
             ->line('Hemos recibido una petición para restablecer la contraseña de tu cuenta.')
-            // ->line('You are receiving this email because we received a password reset request for your account.')
             ->action('Restablecer Contraseña', route('show-reset_form', $this->token))
             ->line('En caso de que no hayas hecho está petición no es necesario hacer nada.')
             ->salutation('Saludos,');
