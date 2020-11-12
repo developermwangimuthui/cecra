@@ -1,6 +1,6 @@
 @include('includes.header')
-<body>    
+<body>
         @include('includes.navbar')
     @yield('content')
 </body>
-@include('includes/footer')
+@include('includes.footer')

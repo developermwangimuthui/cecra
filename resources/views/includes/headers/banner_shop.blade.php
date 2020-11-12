@@ -1,48 +1,51 @@
 <style>
-    .conta {
-        margin-left: 2.2%; 
-         margin-right: 2.2%;
-    }
-
-    .ab {
-        margin-left: 2vw;
-        margin-right: 1.6vw;
-        padding-top: 6px;
-        padding-bottom: 6px;
-    }
-
-    .ab button {
-        border: none !important;
-        color: black;
+    .background{
+        width:100%;
+        height:auto;
+        background: url('assets/images/slider/821.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
     }
 </style>
-{{-- <center> --}}
-    {{-- <div class="border-top d-sm-block container">
-        <div class="conta top-m">
-            <div class="row justify-content-center">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler col-lg-12 bg-white shadow btn-border border-0" width="100%" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    {{-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav mr-auto  mt-lg-0 list-unstyled">
-                            // require "includes/config.php";
-                            // $query= "select * from shop_categories WHERE category_name NOT IN ('Clothes Baby', 'Clothes Man', 'Clothes Woman','Clothes Girl','Clothes Boy','Clothes All types','Clothes Others','others') order by category_name";
-
-                            // $result= mysqli_query($conn,$query);
-                            // while($category= mysqli_fetch_array($result)){
-
-                            @foreach ($categories as $ct)
-                            <li class="nav-item">
-                                <a href="" class="ab">{{ $ct->category_name }}</a>
-                            </li>
-                        @endforeach
-                        </ul>
-                    </div> --}}
-
-                {{-- </nav>
+<section class="background">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 17% 5% 13% 5%;">
+                    <!-- Search -->
+                    <div class="search-box">
+                        <div class="col-md-12">
+                            <form class="row justify-content-center" action="" method="post">
+                                <div class="form-group search-location col-md-12">
+                                    <div class="row justify-content-center">
+                                        <input type="text" name="searchquery" class="form-control col-md-4 border-dark" placeholder=" Restaurant, Mobiles, Cars, Smart TV ...">
+                                    </div>
+                                </div>
+                                <?php if(!empty($searchErr)){  ?>
+                                    <div class="form-group search-location col-md-12">
+                                        <div class="row justify-content-center">
+                                            <span class="text-danger" style="background-color:white;"><?php echo "*".$searchErr;?></span>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                                <br/>
+                                <div class="form-group search-info col-md-12">
+                                    <div class="row justify-content-center">
+                                        <input type="text" name="address" class="form-control col-md-4 border-dark" placeholder="Insert your address">
+                                    </div>
+                                </div>
+                                <?php if(!empty($addressErr)){  ?>
+                                    <div class="form-group search-location col-md-12">
+                                        <div class="row justify-content-center">
+                                            <span class="text-danger" style="background-color:white;"><?php echo "*".$addressErr;?></span>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                                <button type="submit" class="btn takfua-back text-white col-md-4" style="margin-right: .9%;" name="searchbtn"> <i class="fas fa-search"></i> Search</button>
+                            </form>
+                        </div>
+                    </div>
             </div>
-        </div> --}}
-    {{-- </div>  --}}
-{{-- </center> --}}
+        </div>
+    </div>
+</section>

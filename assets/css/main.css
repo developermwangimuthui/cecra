@@ -8,7 +8,7 @@
 
 .filterr{
     filter: grayscale(100%);
-    
+
 }
 
 .filterrr{
@@ -334,7 +334,7 @@ image-rendering: pixelated;
     padding-bottom: 8px;
     padding-left: 13px;
     font-size: 14px;
-    font-weight: 500;  
+    font-weight: 500;
 }
 
 .pad-b{
@@ -385,18 +385,18 @@ image-rendering: pixelated;
 }
 
 #getss{
-    font-size: 7vw; 
-    font-weight: 600; 
+    font-size: 7vw;
+    font-weight: 600;
     line-height: 35px;
 }
 
 #getsss{
-    font-size: 4vw; 
+    font-size: 4vw;
     font-weight: 600;
 }
 
 .get-started{
-    color:white; 
+    color:white;
     margin-right: 10px;
     border-radius:2px;
     padding-left: 25px;
@@ -404,14 +404,14 @@ image-rendering: pixelated;
 }
 
 .get-a-demo{
-    border-radius:2px; 
+    border-radius:2px;
     margin-right: 5px;
     padding-left: 25px;
     padding-right: 25px;
 }
 
 .figure-ab{
-    width: 23%; 
+    width: 23%;
     padding: 0;
     margin: 0;
 }
@@ -434,75 +434,75 @@ image-rendering: pixelated;
     padding-left: 15px;
     padding-right: 15px;
  }
- 
+
  .p-60{
      padding-top: 70px;
  }
- 
+
  .p-400{
      padding-bottom: 30px;
  }
- 
+
  .font-11{
      font-size: 13px;
  }
- 
+
  .font-9{
      font-size: 12px;
  }
- 
+
  .card-height{
      height: 260px;
  }
- 
+
  .lister{
      list-style: outside circle url('../images/check.png');
  }
- 
+
  .listr{
      list-style: inside circle url('../images/dot-2.png');
      margin-right: 10px;
      padding: 8px;
  }
- 
+
  .line-h{
      line-height: 30px;
  }
- 
+
  .font-vw{
      font-size: 4vw;
  }
- 
+
  .my1-vw{
      padding-top: 5.5vw;
      padding-bottom: 4vw;
  }
- 
+
  .padd-min{
      margin: 2%;
  }
- 
+
  .effect:hover{
      background: #f5f5f5;
  }
- 
+
  .mr-pro{
      margin-left: 15px;
  }
- 
+
  .show-none{
     display: none;
  }
- 
+
  .box{
         /*color: #fff;*/
         /*padding: 20px;*/
         display: none;
         padding-top: 20px;
     }
-.red{ }
+/* .red{ }
 .green{ }
-.blue{ }
+.blue{ } */
 
 .entry:not(:first-of-type)
 {
@@ -657,7 +657,7 @@ input[name="star"]:checked + label {
     color: #fff;
     font-size: 31px;
     top: 0px;
-    left: 223px;    
+    left: 223px;
     display: none;
     padding: 0px;
     cursor: pointer;
@@ -741,7 +741,7 @@ input[name="star"]:checked + label {
 
 }
 
-.date-picker{    
+.date-picker{
     border-color: #138871;
     color: #fff;
     background-color: #149077;
@@ -934,5 +934,34 @@ input[name="star"]:checked + label {
     background: #eee;
     overflow-x: hidden;
     padding: 8px 0;
+}
+
+/* =====================hide scroll bar======================= */
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .catList::-webkit-scrollbar {
+    display: none;
+  }
+  .catlist{
+    overflow-x: auto;
+
+  }
+
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .catList {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* ==================================== App Buttons========================== */
+
+.cecra_btn {
+    width: 100%;
+    background: #60a3bc !important;
+    color: white !important;
+}
+.cecra_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
 }
 

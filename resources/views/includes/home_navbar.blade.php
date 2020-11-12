@@ -48,7 +48,12 @@
                     </div>
                 </div>
             </nav>
-            
+            <ul class="list-group list-group-horizontal catList" -webkit-scrollbar="display:none;" style="overflow-x: scroll; -ms-overflow-style: none; scrollbar-width: none; white-space: nowrap;">
+                @foreach ($catsorted as $category)
+                     <li class="list-group-item bg-light border-0 "><a href="" class="">{{$category}}</a></li>
+                @endforeach
+
+            </ul>
         </div>
     </div>
 </center>
@@ -109,6 +114,15 @@
                             <a class="dropdown-item " id="esLocale" data-locale="es" href="{{ route('lang2',['locale'=>'es']) }}">{{ strtoupper(trans('sentence.signup.spain')) }}</a>
                         </div>
                     </li>
+                </ul>
+                <ul class="list-group list-group-flush ">
+                    <li class="list-group-item bg-light ">Categories</li>
+
+                    @foreach ($catsorted as $category)
+
+                         <li class="list-group-item bg-white border-2 border-secondary "><a href="" class="">{{$category}}</a></li>
+                    @endforeach
+
                 </ul>
 
             </div>

@@ -1,126 +1,30 @@
-{{-- @extends('layouts.shop_layout')
-@section('title','Shops')
-@section('content') --}}
 @include('includes.header')
 
-<body>    
-    @include('includes.navbar')
-    @include('includes/headers/banner_shop')    
+<body>
+    @include('includes.home_navbar')
+    @include('includes/headers/banner_shop')
+
+    <style>
+
+        .cecra_btn {
+            width: 100%;
+            background: #60a3bc !important;
+            color: white !important;
+        }
+        .cecra_btn:focus {
+            box-shadow: none !important;
+            outline: 0px !important;
+        }
+        </style>
 
 
-<div class="d-none d-sm-block">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
 
-        <div class="carousel-inner">
-
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="{{URL::asset('assets/images/slider/822.jpg')}}" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{{URL::asset('assets/images/slider/821.jpg')}}" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{{URL::asset('assets/images/slider/823.jpg')}}" alt="Third slide">
-            </div>
-        </div>
-
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
-
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-none d-sm-block" style="padding: 17% 5% 13% 5%;">
-    <!-- Search -->
-    <div class="search-box">
-        <div class="col-md-12">
-            <form class="row justify-content-center" action="" style="margin-top: -44%;">
-                <div class="form-group search-location col-md-12">
-                    <div class="row justify-content-center">
-                        <input type="text" class="form-control col-md-4 border-dark" placeholder=" Iphone, Smart TV, Kids ...">
-                    </div>
-                </div>
-                <br/>
-                <div class="form-group search-info col-md-12">
-                    <div class="row justify-content-center">
-                        <input type="text" class="form-control col-md-4 border-dark" placeholder="Insert your address">
-                    </div>
-                </div>
-                <button type="submit" class="btn takfua-back text-white col-md-4" style="margin-right: 0.9%;"> <i class="fas fa-search"></i> Search</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<div class="d-block d-sm-none">
-<div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-
-    <div class="carousel-inner">
-
-        <div class="carousel-item active">
-            <img style="height:300px;" class="d-block w-100" src="{{ URL::asset('assets/images/slider/822.jpg')}}" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img style="height:300px;" class="d-block w-100" src="{{URL::asset('assets/images/slider/821.jpg') }}" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img style="height:300px;" class="d-block w-100" src="{{URL::asset('assets/images/slider/823.jpg') }}" alt="Third slide">
-        </div>
-    </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-</div>
-
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-block d-sm-none" style="padding: 17% 5% 13% 5%;">
-    <!-- Search -->
-    <div class="search-box">
-        <div class="col-md-12">
-            <form class="row justify-content-center" action="" style="margin-top: -100%;">
-                <div class="form-group search-location col-md-12">
-                    <div class="row justify-content-center">
-                        <input type="text" class="form-control col-md-4 border-dark" placeholder=" Iphone, Smart TV, Kids ...">
-                    </div>
-                </div>
-                <br/>
-                <div class="form-group search-info col-md-12">
-                    <div class="row justify-content-center">
-                        <input type="text" class="form-control col-md-4 border-dark" placeholder="Insert your address">
-                    </div>
-                </div>
-                <button type="submit" class="btn takfua-back text-white col-md-4" style="margin-right: 0.9%;"> <i class="fas fa-search"></i> Search</button>
-            </form>
-        </div>
-    </div>
-</div>
 <!-- Popular Section -->
 <section class="section section-doctor">
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-12" style="margin-top: -37%;">
+            <div class="col-lg-12" style="margin-top: ;">
                 <div class="section-header border-bottom">
                     <h3>Shops close to me</h3>
                 </div>
@@ -157,7 +61,7 @@
                             </div>
                         </div>
                         <!-- /Doctor Widget -->
-            
+
                         <!-- Doctor Widget -->
                         <div class="profile-widget">
                             <div class="doc-img">
@@ -189,7 +93,7 @@
                             </div>
                         </div>
                         <!-- /Doctor Widget -->
-            
+
                         <!-- Doctor Widget -->
                         <div class="profile-widget">
                             <div class="doc-img">
@@ -221,7 +125,7 @@
                             </div>
                         </div>
                         <!-- /Doctor Widget -->
-            
+
                         <!-- Doctor Widget -->
                         <div class="profile-widget">
                             <div class="doc-img">
@@ -253,7 +157,7 @@
                             </div>
                         </div>
                         <!-- /Doctor Widget -->
-            
+
                         <!-- Doctor Widget -->
                         <div class="profile-widget">
                             <div class="doc-img">
@@ -285,9 +189,9 @@
                             </div>
                         </div>
                         <!-- /Doctor Widget -->
-            
-            
-            
+
+
+
                         <!-- Doctor Widget -->
                         <div class="profile-widget">
                             <div class="doc-img">
@@ -378,7 +282,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col-lg-12">
                 <div class="container">
                     <div class="row">
@@ -437,16 +341,16 @@
                                         <h5 class="text-white" style="padding:80px;">{{ $item->category_name }}</h5>
                                     </a>
                                 </div>
-                            </div>                                
+                            </div>
                             @endforeach
                         </div>
                     </center>
                 </div>
             </div>
 
-            <div class="container my-5" style="padding-top: 130px;">
+            <div class="container my-5" style="padding-top: 130px; position: relative;">
                 <div class="col-lg-12" style="background: url('{{URL::asset('assets/images/122.png')}}'); height:280px; background-size: cover;">
-                    <div style="padding-top: 10%;">
+                    <div style=" bottom: 0; left:42%; position: absolute;">
                         <center>
                             <h3 class="text-white">Shops Join Us</h3>
                             <button class="btn btn-danger radius-0 text-white">Shop Now</button>
@@ -459,5 +363,5 @@
 </section>
 <!-- /Popular Section -->
 {{-- @endsection --}}
-</body>
 @include('includes/footer')
+</body>

@@ -11,7 +11,7 @@
     </style>
     <center>
 
-    <div class="bg-white d-none d-sm-block">
+    <div class="bg-light d-none d-sm-block">
         <div class="row justify-content-center">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <img style="width: 17%;" class="navbar-brand d-none d-sm-block d-md-none" src="{{URL::asset('assets/images/ui/logo.png')}}" alt=""/>
@@ -26,25 +26,47 @@
                         <a class="nav-item nav-link navbar-brand" href="#">
                             <img style=" width: 17%;" src="{{URL::asset('assets/images/ui/logo.png')}}" alt=""/>
                         </a>
+                        {{-- code of hiding login and register links if user is already logged in --}}
+                        
+                       {{--  @if (session()->has('businessuser_info'))
+                            <a class="nav-item nav-link my-mrf p-top" href="#">
+                                        {{ $Vendor->business_name }}
+                            </a>
+                            @else
+
+                            @endif --}}
                         <a class="nav-item nav-link my-mrf p-top" href="#">
-                                {{--  {{ $user->profile_name }}  --}}
+                                 {{-- {{ $user->profile_name }} --}}
                         </a>
+
+                        <div class="dropdown my-mrf " style=" margin-top: 4px;">
+                            <a type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{-- <img style="height:100%" class="profile-imgr shadow" src="{{URL::asset('assets/images/users/'.$user->image)}}" alt=""> --}}
+                            </a>
+                        <div class="dropdown-menu" >
+                            <a class="dropdown-item "  href="{{ route('user/logout') }}">Logout</a>
+                            <a class="dropdown-item " href="{{ route('user/dashboard') }}">Profile</a>
+                        </div>
+                        </div>
+
                         <a class="nav-item nav-link p-top " href="#" tabindex="-1" aria-disabled="true">
                             <i class="fa fa-cart-plus font-large"></i> &nbsp; <span class="badge badge-info">1</span>
                         </a>
-                        <a class="nav-item nav-link my-mrf p-top" href="{{ route('user/logout') }}">
+
+
+                        {{-- <a class="nav-item nav-link my-mrf p-top" href="{{ route('user/logout') }}">
                             Logout
-                        </a>
-                        <a class="fa fa-globe icon-font p-top my-mrf" style=" margin-top: 4px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="h6"> Country</span></a>
-                        <div class=dropleft">
-                            <div class="dropdown-menu shadow my-n4" style="margin-left:100%;" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">English</a>
-                                <a class="dropdown-item" href="#">Spanish</a>
-                                <a class="dropdown-item" href="#">Italian</a>
-                                <a class="dropdown-item" href="#">French</a>
-                                <a class="dropdown-item" href="#">German</a>
+                        </a> --}}
+
+
+{{--
+                        <a class="fa fa-globe icon-font p-top my-mrf" style=" margin-top: 4px;" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="h6"> Country</span></a>
+                        <div class="dropleft">
+                            <div class="dropdown-menu shadow my-n4" style="margin-left:100%;" >
+                                <a class="dropdown-item " id="enLocale" data-locale="en" href="{{ route('lang2',['locale'=>'en']) }}">{{ strtoupper(trans('sentence.signup.unitedKingdom')) }}</a>
+                                <a class="dropdown-item " id="esLocale" data-locale="es" href="{{ route('lang2',['locale'=>'es']) }}">{{ strtoupper(trans('sentence.signup.spain')) }}</a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </nav>

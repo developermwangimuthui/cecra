@@ -240,6 +240,25 @@ Route::post('/bus/reset-password', [
     App\Http\Controllers\Auth\VendorResetPasswordController::class, 'updateVendorPassword'
 ])->name('V_reset-password');
 
+// thankyou page test Route
+
+Route::view('/thankyou', 'user_pages.thankyou_page');
+
+Route::view('/shop-Portal', 'seller.shop.Shop_Portal.index');
+
+Route::get('/shoping', [
+    App\Http\Controllers\Seller\Shop\ShopPortalController::class, 'index'
+])->name('V');
+
+Route::get('/categorie', [
+    App\Http\Controllers\Seller\Shop\ShopPortalController::class, 'showCategory'
+])->name('V');
+
+
+Route::get('/productos',[
+    \App\Http\Controllers\Seller\Shop\ShopPortalController::class,'showProduct'
+    ])->name('shop.category.show');
+
 
 
 
