@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use DB;
-
+use db
 class VendorProduct extends Model
 {
     use HasFactory;
@@ -85,9 +85,12 @@ class VendorProduct extends Model
         return $this->hasMany(VendorProductSize::class, 'vendor_product_id', 'vendor_product_id');
     }
     public function image() {
-        return $this->morphMany(Image::class, 'imageable');
+        return $this->morphMany('App\Models\Image', 'imageable');
+        // return $this->morphMany(Image::class, 'imageable');
     }
     public function getAdditionalImages() {
         return $this->image();
     }
+
+
 }

@@ -13,6 +13,11 @@ class VendorProductImage extends Model
      *
      * @var array
      */
-    protected $fillable = ['vendor_product_image','vendor_product_id'];    
+    protected $fillable = ['vendor_product_image','vendor_product_id'];
+
+    public function product()
+    {
+        return $this->belongsTo('App\Models\VendorProduct', 'vendor_product_id', 'vendor_product_image_id');
+    }
 
 }

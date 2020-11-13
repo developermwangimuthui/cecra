@@ -257,7 +257,7 @@ Route::get('/shop-category/{id}', [
 
 Route::get('/productos/{id}',[
     \App\Http\Controllers\Seller\Shop\ShopPortalController::class,'showProduct'
-    ])->name('shop.product.show');
+])->name('shop.product.show');
 
 
 
