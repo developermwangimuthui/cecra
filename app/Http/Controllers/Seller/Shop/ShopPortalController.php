@@ -19,22 +19,11 @@ class ShopPortalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($vendor_id)
     {
-        //
-        /*
-        $bizType = Vendor::where('raw_email', 'ndirashjose@gmail.com')->first();
 
-        $banner = $bizType->shop_image;
 
-        return view('seller.shop.Shop_Portal.index')->with('banner', $banner); */
-
-        // dd($bizType->coverimage);
-
-        if (session()->has('businessuser_info')) {
-            $user_info = session()->get('businessuser_info', 'default');
-            $id = $user_info['user_id'];
-            $vendor = Vendor::where('vendor_id', $id)->take(1)->first();
+            $vendor = Vendor::where('vendor_id', $vendor_id)->take(1)->first();
             // Get shop categories
             $biz = $vendor->business_type;
             $bizType = BusinessType::where('business_type_name', $biz)->pluck('business_type_id');
@@ -50,17 +39,20 @@ class ShopPortalController extends Controller
             // dd($shop_categories);
 
 
-            return view('Shop_Portal.index')->with(['vendor' => $vendor, 'Scategories' => $unique, 'p_categories' => $p_categories]);
-        } else {
-            return redirect('bus/signin');
-        }
+            return view('Shop_Portal.index')->with([
+                'vendor' => $vendor,
+                 'Scategories' => $unique,
+                  'p_categories' => $p_categories,
+                  'products' => $products,
+            ]);
+
     }
 
 
     public function showCategory($category_id)
     {
         //
-
+        // dd($category_id);
         $try = Category::all();
         $categories = Category::where('business_type_id', 1)->get();
         $categoryImage = Category::where('business_type_id', 1)->pluck('category_image');
@@ -93,16 +85,16 @@ class ShopPortalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function showProduct()
+    public function showProduct($vendor_product_id)
     {
         //
-        // $Product = VendorProduct::where('vendor_product_id', $vendor_product_id);
-        $Product = VendorProduct::where('vendor_product_id', 1 )->first();
-        $shop = Vendor::firstWhere('vendor_id', $Product->vendor_id);
-        $product_size = VendorProductSize::where('vendor_product_id', $Product->vendor_product_id)->get();
-        $product_color = VendorProductColor::where('vendor_product_id', $Product->vendor_product_id)->get();
-        $product_image = VendorProductImage::where('vendor_product_id', $Product->vendor_product_id)->first();
-        $product_image_thumb = VendorProductImage::where('vendor_product_id', $Product->vendor_product_id)->get();
+        $Product = VendorProduct::where('vendor_product_id', $vendor_product_id)->first();
+        // $Product = VendorProduct::where('vendor_product_id', 1)->first();
+        $shop = Vendor::Where('vendor_id', $Product->vendor_id)->first();
+        $product_size = VendorProductSize::where('vendor_product_id', $vendor_product_id)->get();
+        $product_color = VendorProductColor::where('vendor_product_id', $vendor_product_id)->get();
+        $product_image = VendorProductImage::where('vendor_product_id', $vendor_product_id)->first();
+        $product_image_thumb = VendorProductImage::where('vendor_product_id', $vendor_product_id)->get();
 
         // dd($product_image);
         return view('Shop_Portal.product_page')->with([

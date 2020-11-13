@@ -50,7 +50,9 @@
             </nav>
             <ul class="list-group list-group-horizontal catList" -webkit-scrollbar="display:none;" style="overflow-x: scroll; -ms-overflow-style: none; scrollbar-width: none; white-space: nowrap;">
                 @foreach ($catsorted as $category)
-                     <li class="list-group-item bg-light border-0 "><a href="" class="">{{$category}}</a></li>
+                     <li class="list-group-item bg-light border-0 ">
+                         <a href="{{route('shop.category.show', $category->category_id)}}" class="">{{$category->category_name}}</a>
+                    </li>
                 @endforeach
 
             </ul>

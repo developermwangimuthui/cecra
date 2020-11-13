@@ -34,9 +34,9 @@
                             <a class="nav-item nav-link my-mrf p-top" href="#" tabindex="-1" aria-disabled="true">
                             <img class="img-box" style=" border-radius: 50%; height: 40px; width: 40px; margin-top: -5px;" src="{{ URL::asset('assets/images/user.png') }}" alt="" />
                             </a> --}}
-                            <!--<a class="nav-item nav-link p-top " href="#" tabindex="-1" aria-disabled="true">
+                            <a class="nav-item nav-link p-top " href="#" tabindex="-1" aria-disabled="true">
 								<i class="fa fa-cart-plus font-large"></i> &nbsp; <span class="badge badge-info">0</span>
-                            </a>-->
+                            </a>
 
 
 

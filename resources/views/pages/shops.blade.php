@@ -31,11 +31,13 @@
                 <div class="">
                     <div class="doctor-slider slider">
                         <!-- Doctor Widget -->
+                        @foreach ($shops as $shops)
+
                         <div class="profile-widget">
+                            <a href="" class="btn bg-white  btn-sm " style="z-index: 1; position: relative;">120 mts</a>
                             <div class="doc-img">
-                                <a href="" class="btn bg-white btn-sm m-1" style="z-index: 1; position: absolute;">120 mts</a>
                                 <h3 class="title text-center">
-                                    <!--<a href="doctor-profile.html">juicy joy</a>-->
+                                    <a href="{{route('shop-portal', $shops->vendor_id)}}">{{$shops->business_name}}</a>
                                 </h3>
                                 <a href="product.php">
                                     <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/shop/2.jpg') }}">
@@ -55,11 +57,12 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                     <div class=" row-sm">
-                                        <h4 class="speciality text-center">Elite market 2-s7</h4>
+                                        <h4 class="speciality text-center">{{$shops->category}}</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                         <!-- /Doctor Widget -->
 
                         <!-- Doctor Widget -->

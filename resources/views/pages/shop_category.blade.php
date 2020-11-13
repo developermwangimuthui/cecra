@@ -28,7 +28,7 @@
                             <div class="profile-widget">
                                 <div class="doc-img">
                                     <h3 class="title text-center">
-                                        <a href="#">{{$item->business_name}}</a>
+                                    <a href="{{route('shop-portal', $item->vendor_id)}}">{{$item->business_name}}</a>
                                     </h3>
                                     <a href="product.php">
                                         <img class="img-fluid" style="height: 180px;" alt="User Image" src="{{URL::asset('assets/images/vendors/'.$item->coverimage) }}">

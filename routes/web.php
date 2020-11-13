@@ -244,20 +244,20 @@ Route::post('/bus/reset-password', [
 
 Route::view('/thankyou', 'user_pages.thankyou_page');
 
-Route::view('/shop-Portal', 'seller.shop.Shop_Portal.index');
+// Route::view('/shop-Portal', 'seller.shop.Shop_Portal.index');
 
-Route::get('/shoping', [
+Route::get('/shop-page/{id}', [
     App\Http\Controllers\Seller\Shop\ShopPortalController::class, 'index'
-])->name('V');
+])->name('shop-portal');
 
-Route::get('/categorie', [
+Route::get('/shop-category/{id}', [
     App\Http\Controllers\Seller\Shop\ShopPortalController::class, 'showCategory'
-])->name('V');
+])->name('shop.category.show');
 
 
-Route::get('/productos',[
+Route::get('/productos/{id}',[
     \App\Http\Controllers\Seller\Shop\ShopPortalController::class,'showProduct'
-    ])->name('shop.category.show');
+    ])->name('shop.product.show');
 
 
 

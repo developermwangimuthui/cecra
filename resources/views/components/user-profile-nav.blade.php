@@ -13,7 +13,7 @@
 
     <div class="bg-light d-none d-sm-block">
         <div class="row justify-content-center">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
                 <img style="width: 17%;" class="navbar-brand d-none d-sm-block d-md-none" src="{{URL::asset('assets/images/ui/logo.png')}}" alt=""/>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -34,9 +34,12 @@
                         {{-- code of hiding login and register links if user is already logged in --}}
 
                         @if (session()->has('user_info'))
-                            <a class="nav-item nav-link  p-top" href="#">
+                            <a class="nav-item nav-link p-top" href="#">
                                         {{ $user->profile_name }}
                             </a>
+                            <a class="nav-item nav-link  p-top" href="{{route('user/logout')}}">
+                                logout
+                             </a>
                             @else
                             <a class="nav-item nav-link  p-top" href="{{route('user_login')}}">
                                 login
@@ -46,18 +49,14 @@
                             </a>
 
                         @endif
-                        <a class="nav-item nav-link  p-top" href="#">
-                                 {{-- {{ $user->profile_name }} --}}
-                        </a>
 
-
-                        <a class="fa fa-globe icon-font p-top "  type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        {{-- <a class="fa fa-globe icon-font p-top "  type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                         <div class="">
                             <div class="dropdown-menu shadow p-top my-n4" style="margin-left:100%;" >
                                 <a class="dropdown-item " id="enLocale" data-locale="en" href="{{ route('lang2',['locale'=>'en']) }}">{{ strtoupper(trans('sentence.signup.unitedKingdom')) }}</a>
                                 <a class="dropdown-item " id="esLocale" data-locale="es" href="{{ route('lang2',['locale'=>'es']) }}">{{ strtoupper(trans('sentence.signup.spain')) }}</a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </nav>

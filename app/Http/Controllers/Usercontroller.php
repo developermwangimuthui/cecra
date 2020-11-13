@@ -119,24 +119,47 @@ class Usercontroller extends Controller{
         }
     }
     public function userBilling(){
-        $data['page'] = 'billing';
-        return view('user_pages.billing')->with($data);
+        if (session()->has('user_info')) {
+            $data['page'] = 'billing';
+            return view('user_pages.billing')->with($data);
+        }else{
+            return redirect('user_login');
+        }
     }
     public function userPasswordSec(){
-        $data['page'] = 'passw';
-        return view('user_pages.passwordsec')->with($data);
+        if (session()->has('user_info')) {
+
+            $data['page'] = 'passw';
+            return view('user_pages.passwordsec')->with($data);
+        }else{
+            return redirect('user_login');
+        }
     }
     public function userContactInfo(){
-        $data['page'] = 'conti';
-        return view('user_pages.contactinfo')->with($data);
+        if (session()->has('user_info')) {
+
+            $data['page'] = 'conti';
+            return view('user_pages.contactinfo')->with($data);
+        }else{
+            return redirect('user_login');
+        }
     }
     public function userCart(){
-        $data['page'] = 'cart';
-        return view('user_pages.cart')->with($data);
+        if (session()->has('user_info')) {
+            $data['page'] = 'cart';
+            return view('user_pages.cart')->with($data);
+        }else{
+            return redirect('user_login');
+        }
     }
     public function userOrderHistory(){
-        $data['page'] = 'orderh';
-        return view('user_pages.order_history')->with($data);
+        if (session()->has('user_info')) {
+
+            $data['page'] = 'orderh';
+            return view('user_pages.order_history')->with($data);
+        }else{
+            return redirect('user_login');
+        }
     }
     public function logout(Request $request){
         // Forget a single key...
