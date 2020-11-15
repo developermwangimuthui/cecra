@@ -172,7 +172,7 @@ return [
                 ],
         'store' => [
             'label' => [
-                'manageStore'             => 'Gestionar Negocio',
+                'manageStore'             => 'Administrar Tienda',
                 'updateMessage'           => 'Los detalles de la tienda se actualizaron correctamente',
                 'businessName'            => 'Nombre Negocio',
                 'shopTelephone'           => 'Telefono',
