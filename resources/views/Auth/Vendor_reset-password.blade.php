@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-84YZNZXFXF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-84YZNZXFXF');
+</script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,7 +17,7 @@
         <!-- Favicons -->
         <!--<link type="image/x-icon" href="assets/img/logo-tab.png" rel="icon">-->
         <!-- Bootstrap CSS -->
-        <title>{{ trans('sentence.footer.closeToMe') }}</title>
+        <title>Resetear Contraseña Negocio</title>
         <link rel="icon" href="{{ URL::asset('assets/images/ui/logo.png') }}">
 
         <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">

@@ -6,7 +6,7 @@
     <section class="imagenprincipal">
         <div class="imagenprincipal">
           <div class="textoimagenprincipal">
-            <h1>Abre tu negocio online<br>
+            <h1>Abre tu Negocio Digital<br>
               ¡Sólo pagas por venta realizada!<br>
             </h1>
           </div>

@@ -48,13 +48,13 @@ class VendorForgotPasswordController extends Controller
 
 
 
-        return redirect()->back()->with('msg', 'We have e-mailed your password reset link!');
+        return redirect()->back()->with('msg', 'Si su correo es valido le hemos enviado un correo electrónico con un link para que pueda restablecer su contraseña. Por favor revise la carpeta de Correo No Deseado.');
 
 
         } else {
 
 
-        return redirect()->back()->with('msg', 'Email does not exist');
+        return redirect()->back()->with('msg', 'Correo Electrónico Inexistente');
         }
 
 
