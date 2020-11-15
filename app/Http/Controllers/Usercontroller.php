@@ -35,7 +35,7 @@ class Usercontroller extends Controller{
             }
         }
         else{
-            return redirect('/user_login')->with('msg','Invalid Email or password');
+            return redirect('/user_login')->with('msg','Correo Electrónico o Contraseña Invalidos');
         }
     }
     public function signup(){

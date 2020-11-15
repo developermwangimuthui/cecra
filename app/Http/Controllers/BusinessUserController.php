@@ -386,7 +386,7 @@ class BusinessUserController extends Controller
             }
         }
         else{
-            return redirect('/bus/signin')->with('msg','Invalid Email or password');
+            return redirect('/bus/signin')->with('msg','Correo Electrónico o Contraseña Invalidos');
         }
     }
 
