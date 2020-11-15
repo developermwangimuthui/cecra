@@ -79,7 +79,7 @@
                             </p>
                             <p class="mb-0">
                                 <i class="fas fa-envelope"></i>
-                                <a href="mailto:info@cercademi.me" class="text-white">dldsjds info@cercademi.me</a>
+                                <a href="mailto:info@cercademi.me" class="text-white">info@cercademi.me</a>
                             </p>
                         </div>
                     </div>
