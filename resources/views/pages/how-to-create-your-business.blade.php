@@ -16,12 +16,12 @@
     </section>
     <div class="textoventajas">
         <h3>Ventajas</h3>
-        <p>Crea tu negocio online</p>
-        <p>Gestiona tus productos o menús</p>
-        <p>Administra tus pedidos y entregas</p>
-        <p>Conoce a tus clientes</p>
-        <p>Paga solo por venta</p>
-        <p>¡Vende más!  </p>
+    <p>Gestiona tus productos y pedidos</p>
+    <p>Nos encargamos de las entregas*</p>
+    <p>	Llega a  más clientes y conócelos</p>
+    <p>Paga solo por venta</p>
+    <p>Aprovecha de nuestras campañas de marketing</p>
+    <p>¡Vende más!  </p>
     </div>
 
     <div class="imagenventajas">
@@ -68,27 +68,33 @@
       <p>Teléfono: +34 673 74 74 46</p>
       <p>Email: <a href="mailto:info@cercademi.me">info@cercademi.me</a></p>
       <h1>¡Así de sencillo!</h1>
-      <h2>Precios Pre Apertura</h2>
-      <p>Esta oferta durará hasta el día del lanzamiento del portal al público. </p>
-      <p>Descuentos en las comisiones durante un año entero.</p>
-      <p>Tiendas de Electrodomésticos, Tecnología y electrónicos (Móviles, Ordenadores, etc)</p>
-      <h5>Comisión 10% del precio del producto</h5>
-      <p>Comisión para tiendas de Perfumes, Cosméticos, Ropa, Juguetes, Relojes y otros</p>
-      <h5>Comisión 15% del precio del producto</h5>
-      <p>Restaurantes Reservas</p>
-      <h5>Comisión 1,50 € por persona</h5>
-      <p>Restaurantes Pedidos </p>
-      <h5>Comisión 15% del total del pedido</h5>
-      <h2>Precios Post Apertura</h2>
-      <p>Tiendas de Electrodomésticos, Tecnología y electrónicos (Móviles, Ordenadores, etc)</p>
-      <h5>Comisión 15% del precio del producto</h5>
-      <p>Comisión para tiendas de Perfumes, Cosméticos, Ropa, Juguetes, Relojes y otros</p>
-      <h5>Comisión 20% del precio del producto</h5>
-      <p>Restaurantes Reservas</p>
-      <h5>Comisión 2 € por persona</h5>
-      <p>Restaurantes Pedidos </p>
-      <h5>Comisión 20% del total del pedido</h5>
-      <p>&nbsp;</p>
+      <div id="tabla" style="text-align:center;">
+    <h2>Comisiones</h2>
+    <table width="200" border="0" style="margin: 0 auto; color: #000000;">
+      <tbody>
+        <tr>
+          <td width="139"><h4>Negocios</h4></td>
+          <td width="145"><h4>Pre Apertura**</h4></td>
+          <td width="191"> <h4>Post Apertura</h4></td>
+          </tr>
+        <tr>
+          <td height="82" style="text-align: left"><h6 style="text-decoration-color: black">Electrodomésticos, Tecnología y electrónicos </h6></td>
+          <td style="text-decoration-color: black"><h6>10%</h6></td>
+          <td style="text-decoration-color: black"><h6>15%</h6></td>
+          </tr>
+        <tr>
+          <td height="79" style="text-align: left"><h6 style="text-decoration-color: black">Perfumes, Cosméticos, Ropa, Juguetes, Relojes y otros</h6></td>
+          <td style="text-decoration-color: black"><h6>15%  </h6></td>
+          <td style="text-decoration-color: black"><h6>20% </h6></td>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+		
+  <p>**Esta oferta durará hasta el día del lanzamiento del portal al público. </p>
+  <p>**Descuentos en las comisiones durante un año entero.  </p>
+  <p>El porcentaje se aplica al precio de venta del producto.</p>
+  <p>* Nos encargamos de las entregas de los productos con un peso máximo de hasta 31,5 Kg y dimensiones 120 cm x 60 cm x 60 cm</p>
     </div>
       </div>
     </main>
