@@ -195,12 +195,30 @@ Route::prefix('restaurantportal')->group(function() {
     ]);
 });
 
+Route::get('/como-crear-tu-tienda', [
+    \App\Http\Controllers\Pagecontroller::class, 'ComoCrearTuTienda'
+])->name('como-crear-tu-tienda');
 
+Route::get('/terminos-y-condiciones-negocios', [
+    \App\Http\Controllers\Pagecontroller::class, 'TerminosYCondicionesNegocios'
+])->name('terminos-y-condiciones-negocios');
+
+Route::get('/politica-de-privacidad', [
+    \App\Http\Controllers\Pagecontroller::class, 'PoliticaDePrivacidad'
+])->name('politica-de-privacidad');
+
+Route::get('/politica-de-cookies', [
+    \App\Http\Controllers\Pagecontroller::class, 'PoliticaDeCookies'
+])->name('politica-de-cookies');
 
 Route::get('/how-to-create-your-business', [
     \App\Http\Controllers\Pagecontroller::class, 'howToCreateYourBusiness'
 ])->name('how-to-create-your-business');
 
+
+Route::get('/seccion-en-construccion', [
+    \App\Http\Controllers\Pagecontroller::class, 'SeccionEnConstruccion'
+])->name('seccion-en-construccion');
 // password reset
 
 // -----------------------------User forget password ------------------------------
@@ -239,25 +257,6 @@ Route::get('/bus/reset-password/{token}', [
 Route::post('/bus/reset-password', [
     App\Http\Controllers\Auth\VendorResetPasswordController::class, 'updateVendorPassword'
 ])->name('V_reset-password');
-
-// thankyou page test Route
-
-Route::view('/thankyou', 'user_pages.thankyou_page');
-
-// Route::view('/shop-Portal', 'seller.shop.Shop_Portal.index');
-
-Route::get('/shop-page/{id}', [
-    App\Http\Controllers\Seller\Shop\ShopPortalController::class, 'index'
-])->name('shop-portal');
-
-Route::get('/shop-category/{id}', [
-    App\Http\Controllers\Seller\Shop\ShopPortalController::class, 'showCategory'
-])->name('shop.category.show');
-
-
-Route::get('/productos/{id}',[
-    \App\Http\Controllers\Seller\Shop\ShopPortalController::class,'showProduct'
-])->name('shop.product.show');
 
 
 

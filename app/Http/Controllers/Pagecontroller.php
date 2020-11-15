@@ -32,4 +32,28 @@ class Pagecontroller extends Controller
         $this->data['title'] = 'How to Create Your Business';
         return view('pages.how-to-create-your-business', $this->data);
     }
+	
+	public function ComoCrearTuTienda() {
+        $this->data['title'] = 'Como Crear Tu Tienda';
+        return view('pages.como-crear-tu-tienda', $this->data);
+		}
+	public function TerminosYCondicionesNegocios() {
+        $this->data['title'] = 'Terminos y Condiciones Negocios';
+        return view('pages.terminos-y-condiciones-negocios', $this->data);
+		}	
+	public function PoliticaDePrivacidad() {
+        $this->data['title'] = 'Politica De Privacidad';
+        return view('pages.politica-de-privacidad', $this->data);
+		
+    }
+	public function PoliticaDeCookies() {
+        $this->data['title'] = 'Politica De Cookies';
+        return view('pages.politica-de-cookies', $this->data);
+		
+    }
+		public function SeccionEnConstruccion() {
+        $this->data['title'] = 'Sección En Construcción';
+        return view('pages.seccion-en-construccion', $this->data);
+		
+    }
 }

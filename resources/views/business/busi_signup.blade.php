@@ -221,7 +221,7 @@
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="confirmed">
                                         <label class="form-check-label" for="defaultCheck1">
-                                            {{trans('sentence.signup.iConfirmed')}} <a href="" class="text-info">{{trans('sentence.footer.termsAndConditions')}}</a>
+                                            {{trans('sentence.signup.iConfirmed')}} <a href="/terminos-y-condiciones-negocios/" class="text-info">{{trans('sentence.footer.termsAndConditions')}}</a>
                                         </label>
                                     </div>
                                     @error('confirmed')
