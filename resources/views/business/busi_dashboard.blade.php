@@ -5,7 +5,11 @@
     <div class=" bg-white main-shadwo">
         <div class="enter-conta">
             <div class="row" >
-
+  <div class="col-lg-12 col-sm-12">
+            <h1>¡Bienvenido a tu tienda!
+            </h1>
+            <p>Recuerda que para que tu portal digital este activo debes completar la información de tu tienda y empezar a crear tus productos desde la sección de Administración. </p>
+            </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="circle-tile">
                         <a href="#">
@@ -74,11 +78,7 @@
 
             </div>
             <div class="row">
-            <div class="col-lg-12 col-sm-12">
-            <p>¡Bienvenido a tu portal!
-                Recuerda que para que tu portal digital este activo debes rellenar la información y el menú de tu restaurante, estas secciones las encuestras en el menú.
-            </p>
-            </div>
+          
         </div>
         </div>
 
