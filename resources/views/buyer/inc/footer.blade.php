@@ -13,10 +13,19 @@
                         <div class="footer-about-content">
                             <!-- Negocios Locales is the digital place for all the shops -->
                             <p>{{ trans('sentence.footer.closeToMeText') }}</p>
-                            <div class="social-icon"> <a href="https://www.facebook.com/Cerca-de-Mi-101394868383256" target="_blank"><img src="../../../../assets/images/icono-facebook.png" alt="" width="22" height="22"/> </a><a href="https://www.instagram.com/cerca_de_mi_es/" target="_blank"><img src="../../../../assets/images/icono-instagram.png" alt="" width="22" height="22"/></a>
-							     <a href="https://twitter.com/mi_cerca" target="_blank"><img src="../../../../assets/images/icono-twitter.png" alt="" width="23" height="22"/></a>
+                            <div class="social-icon"> 
+							<ul>
+								<li>
+                                        <a href="https://www.facebook.com/Cerca-de-Mi-101394868383256" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/mi_cerca" target="_blank"><i class="fab fa-twitter"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/cerca_de_mi_es/" target="_blank"><i class="fab fa-instagram"></i></a>
+							
 
- 
+ </ul>	
                           </div>
                         </div>
                     </div>
@@ -27,14 +36,14 @@
                     <div class="footer-widget footer-menu">
                         <h2 class="footer-title">{{ trans('sentence.footer.partner') }}</h2>
                         <ul>
-                            <li><a href="{{ route('bus/signup') }}"><i ></i>{{ trans('sentence.footer.createYourBusiness') }}</a></li>
-                            <li><a href="{{ route('bus/signin') }}"><i ></i>{{ trans('sentence.footer.signInForBusiness') }}</a></li>
-                            <li><a href="{{ route('como-crear-tu-tienda') }}"><i ></i>
+                            <li><a href="{{ route('bus/signup') }}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.createYourBusiness') }}</a></li>
+                            <li><a href="{{ route('bus/signin') }}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.signInForBusiness') }}</a></li>
+                            <li><a href="{{ route('como-crear-tu-tienda') }}"><i class="fas fa-angle-double-right"></i>
                                     {{ trans('sentence.footer.howToCreateYourBusiness') }}
                                 </a>
                             </li>
 
-                            <li><i ></i> <a href="{{ route('como-crear-tu-tienda') }}">{{ trans('sentence.footer.pricing') }}</a></li>
+                            <li><i ></i> <a href="{{ route('como-crear-tu-tienda') }}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.pricing') }}</a></li>
                         </ul>
                     </div>
                     <!-- /Footer Widget -->
@@ -47,11 +56,11 @@
                     <div class="footer-widget footer-menu">
                         <h2 class="footer-title">{{ trans('sentence.footer.categories') }}</h2>
                         <ul>
-                            <li><i ></i> <a href="{{route('seccion-en-construccion')}}">{{ trans('sentence.footer.clothes') }}</a></li>
-                            <li><i ></i> <a href="{{route('seccion-en-construccion')}}">{{ trans('sentence.footer.electronics') }}</a></li>
-                            <li><i ></i><a href="{{route('seccion-en-construccion')}}"> {{ trans('sentence.footer.gaming') }}</a></li>
-                            <li><i ></i><a href="{{route('seccion-en-construccion')}}"> {{ trans('sentence.footer.computing') }}</a></li>
-                            <li><i ></i><a href="{{route('seccion-en-construccion')}}">{{ trans('sentence.footer.moreCategories') }}</a></li>
+                            <li><i ></i> <a href="{{route('seccion-en-construccion')}}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.clothes') }}</a></li>
+                            <li><i ></i> <a href="{{route('seccion-en-construccion')}}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.electronics') }}</a></li>
+                            <li><i ></i><a href="{{route('seccion-en-construccion')}}"><i class="fas fa-angle-double-right"></i> {{ trans('sentence.footer.gaming') }}</a></li>
+                            <li><i ></i><a href="{{route('seccion-en-construccion')}}"> <i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.computing') }}</a></li>
+                            <li><i ></i><a href="{{route('seccion-en-construccion')}}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.moreCategories') }}</a></li>
                         </ul>
                     </div>
                     <!-- /Footer Widget -->

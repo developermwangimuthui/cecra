@@ -1,3 +1,5 @@
+{{-- <link href="../../../public/css/app.css" rel="stylesheet" type="text/css"> --}}
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"/>
 <footer class="footer fi">
     <div class="footer-top">
         <div class="container">
@@ -23,7 +25,6 @@
                                     <li>
                                         <a href="https://www.instagram.com/cerca_de_mi_es/" target="_blank"><i class="fab fa-instagram"></i></a>
                                     </li>
-                                   
                                 </ul>
                             </div>
                         </div>
@@ -37,12 +38,12 @@
                         <ul>
                               <li><a href="{{ route('bus/signup') }}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.createYourBusiness') }}</a></li>
                               <li><a href="{{ route('bus/signin') }}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.signInForBusiness') }}</a></li>
-                              <li><a href="{{ route('como-crear-tu-tienda') }}"><i class="fas fa-angle-double-right"></i>
+                              <li><a href="{{ route('how-to-create-your-business') }}"><i class="fas fa-angle-double-right"></i>
                                 {{ trans('sentence.footer.howToCreateYourBusiness') }}
                                 </a>
                               </li>
 
-                            <li><a href="{{ route('como-crear-tu-tienda') }}"><i class="fas fa-angle-double-right"></i> {{ trans('sentence.footer.pricing') }}</a></li>
+                            <li><a href="patient-dashboard.html"><i class="fas fa-angle-double-right"></i> {{ trans('sentence.footer.pricing') }}</a></li>
                         </ul>
                     </div>
                     <!-- /Footer Widget -->
@@ -55,11 +56,11 @@
                     <div class="footer-widget footer-menu">
                         <h2 class="footer-title">{{ trans('sentence.footer.categories') }}</h2>
                         <ul>
-                          <li> <a href="{{route('seccion-en-construccion')}}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.clothes') }}</a></li>
-                            <li><a href="{{route('seccion-en-construccion')}}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.electronics') }}</a></li>
-                            <li><a href="{{route('seccion-en-construccion')}}"> <i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.gaming') }}</a></li>
-                            <li><a href="{{route('seccion-en-construccion')}}"> <i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.computing') }}</a></li>
-                            <li><a href="{{route('seccion-en-construccion')}}"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.moreCategories') }}</a></li>
+                            <li><a href="appointments.html"><i class="fas fa-angle-double-right"></i> {{ trans('sentence.footer.clothes') }}</a></li>
+                            <li><a href="chat.html"><i class="fas fa-angle-double-right"></i> {{ trans('sentence.footer.electronics') }}</a></li>
+                            <li><a href="login.html"><i class="fas fa-angle-double-right"></i> {{ trans('sentence.footer.gaming') }}</a></li>
+                            <li><a href="doctor-register.html"><i class="fas fa-angle-double-right"></i> {{ trans('sentence.footer.computing') }}</a></li>
+                            <li><a href="doctor-dashboard.html"><i class="fas fa-angle-double-right"></i>{{ trans('sentence.footer.moreCategories') }}</a></li>
                         </ul>
                     </div>
                     <!-- /Footer Widget -->
@@ -73,16 +74,18 @@
                         <h2 class="footer-title">{{ trans('sentence.footer.contactUs') }}</h2>
                         <div class="footer-contact-info">
                             <p>
-                                <i class="fas fa-phone-alt" ></i>
-                                <a href="tel:+34 673 74 74 46" class="text-white">+34 673 74 74 4</a>
-                            </p>
+                                <a href="tel:+34 673 74 74 46" class="text-white">
+                                <i class="fas fa-phone-alt"></i>
+                                +34 673 74 74 4</a></p>
                             <p>
                                 <i class="fa fa-paper-plane"></i>
                                 <a href="contactus.php" class="text-white">{{ trans('sentence.footer.contactUs') }}</a>
                             </p>
                             <p class="mb-0">
+                                <a href="mailto: info@cercademi.me" class="text-white">
                                 <i class="fas fa-envelope"></i>
-                                <a href="mailto:info@cercademi.me" class="text-white">info@cercademi.me</a>
+                                info@cercademi.me
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -103,10 +106,9 @@
                         <!-- Copyright Menu -->
                         <div class="copyright-menu">
                             <ul class="policy-menu">
-                              <li><a href="https://www.9amdigital.com">{{ trans('sentence.footer.copyright') }} ©</a></li>
-								<li><a href="{{route('politica-de-privacidad')}}">{{ trans('sentence.footer.privacypolicy') }}</a></li>
-								<li><a href="{{route('politica-de-cookies')}}">{{ trans('sentence.footer.cookiespolicy') }}</a></li>
-							  <li><a href="{{route('terminos-y-condiciones-negocios')}}">{{ trans('sentence.footer.termsbusiness') }}</a></li>
+                                <li><a href="term-condition.html">{{ trans('sentence.footer.copyright') }} ©</a></li>
+                                <li><a href="term-condition.html">{{ trans('sentence.footer.termsAndConditions') }}</a></li>
+                                <li><a href="privacy-policy.html">{{ trans('sentence.footer.policy') }}</a></li>
                             </ul>
                         </div>
                         <!-- /Copyright Menu -->
@@ -121,3 +123,12 @@
     <!-- /Footer Bottom -->
 
 </footer>
+<!-- /Footer -->
+<script>
+    var myLabel                 = myLabel || {};
+    myLabel.locale       = '{{route('locale')}}';
+</script>
+<script type="text/javascript" src="{{ asset('js/app.js')}}"></script>
+
+
+<script src="{{ URL::asset('assets/js/bootstrap.min.js')}}"></script>

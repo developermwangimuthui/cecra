@@ -18,9 +18,9 @@
                     <li class="nav-item dropdown px-2 pt-2">
                         <a class="fas fa-globe icon-font" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('lang2',['locale'=>'en']) }}">{{ strtoupper(trans('sentence.signup.unitedKingdom')) }}</a>                <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="{{ route('lang2',['locale'=>'en']) }}">{{trans('sentence.signup.unitedKingdom') }}</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ route('lang2',['locale'=>'es']) }}">{{ strtoupper(trans('sentence.signup.spain')) }}</a>
+                        <a class="dropdown-item" href="{{ route('lang2',['locale'=>'es']) }}">{{trans('sentence.signup.spain')}}</a>
                      </div>
                     </li>
 
@@ -55,9 +55,9 @@
                 <li class="nav-item dropdown px-2 pt-2">
                     <a class="fas fa-globe icon-font" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('lang2',['locale'=>'en']) }}">{{ strtoupper(trans('sentence.signup.unitedKingdom')) }}</a>                <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="{{ route('lang2',['locale'=>'en']) }}">{{ trans('sentence.signup.unitedKingdom') }}</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{ route('lang2',['locale'=>'es']) }}">{{ strtoupper(trans('sentence.signup.spain')) }}</a>
+                    <a class="dropdown-item" href="{{ route('lang2',['locale'=>'es']) }}">{{ trans('sentence.signup.spain') }}</a>
                  </div>
                 </li>
 

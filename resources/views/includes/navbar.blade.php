@@ -8,7 +8,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="row justify-content-center">
-                        <a class="nav-item nav-link active p-top" href="#">{{ trans('sentence.about_us') }} <span class="sr-only">(current)</span></a>
+                        <!--<a class="nav-item nav-link active p-top" href="#">{{ trans('sentence.about_us') }} <span class="sr-only">(current)</span></a>
                         <a class="fa fa-globe icon-font p-top" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="h6"> {{trans('sentence.country')}}</span></a>
                         <div class="dropleft">
                             <div class="dropdown-menu shadow" style="margin-left:100%;" aria-labelledby="dropdownMenuButton">
@@ -18,16 +18,17 @@
                                 <a class="dropdown-item" href="lang/au">Austria</a> --}}
                                 <a class="dropdown-item" href="lang/es">{{trans('sentence.signup.spain')}}</a>
                                 {{-- <a class="dropdown-item" href="lang/it">Italy</a> --}}
+								-->
                             </div>
                         </div>
 
-                        <a class="nav-item nav-link p-top" href="{{route('shops')}}"><i class="fa fa-map-marker-alt text-info"></i> {{ trans('sentence.shops') }}</a>
-                        <a class="nav-item nav-link p-top" href="{{ route('restaurants') }}"><i class="fa fa-map-marker-alt text-danger"></i> {{ trans('sentence.restaurants') }}</a>
-                    <a class="nav-item nav-link navbar-brand" href="{{ route('/') }}">
+                        <!-- <a class="nav-item nav-link p-top" href="{{route('shops')}}"><i class="fa fa-map-marker-alt text-info"></i> {{ trans('sentence.shops') }}</a> -->
+                        <!-- <a class="nav-item nav-link p-top" href="{{ route('restaurants') }}"><i class="fa fa-map-marker-alt text-danger"></i> {{ trans('sentence.restaurants') }}</a> -->
+                    <a class="nav-item nav-link navbar-brand" href="../como-crear-tu-tienda/">
                             <img style=" width: 17%;" src="{{ URL::asset('assets/images/ui/logo.png') }}" alt="" />
                         </a>
 
-                            {{-- <a class="nav-item nav-link my-mrf p-top" href="#">u</a>
+                    <!--        {{-- <a class="nav-item nav-link my-mrf p-top" href="#">u</a>
                             <a class="nav-item nav-link p-top " href="logout.php" tabindex="-1" aria-disabled="true">
                                 {{trans('sentence.Logout')}}
                             </a>
@@ -36,19 +37,15 @@
                             </a> --}}
                             <!--<a class="nav-item nav-link p-top " href="#" tabindex="-1" aria-disabled="true">
 								<i class="fa fa-cart-plus font-large"></i> &nbsp; <span class="badge badge-info">0</span>
-                            </a>-->
-
-
+							</a>
 
                             <a class="nav-item nav-link p-top" href="{{route('user_login')}}"><i class="fa fa-sign-in-alt text-info"></i> {{ trans('sentence.Login') }}</a>
                             <a class="nav-item nav-link  p-top" href="{{route('user_signup')}}"><i class="fas fa-user-plus text-blue"></i>&nbsp;{{trans('sentence.Sign_Up')}}</a>
-
                         <!--<a class="nav-item nav-link p-top" href="register.php"><i class="fa fa-business-time text-green"></i> Start Business</a>-->
 
                     </div>
                 </div>
             </nav>
-            
         </div>
     </div>
 </center>
@@ -64,7 +61,7 @@
                         <span></span>
                     </span>
                 </a>
-                <a href="index.php" class="navbar-brand logo">
+                <a href="../como-crear-tu-tienda/" class="navbar-brand logo">
                     <img src="{{ URL::asset('assets/images/ui/logo.png') }}" class="img-fluid" alt="Logo">
                 </a>
 <!--                 <a href="" class="navbar-brand h4 text-color">
@@ -76,13 +73,14 @@
  -->            </div>
             <div class="main-menu-wrapper">
                 <div class="menu-header">
-                    <a href="index.php" class="menu-logo">
+                    <a href="../como-crear-tu-tienda/" class="menu-logo">
                         <img src="{{ URL::asset('assets/images/ui/logo.png') }}" class="img-fluid" alt="Logo">
                     </a>
                     <a id="menu_close" class="menu-close" href="javascript:void(0);">
                         <i class="fas fa-times"></i>
                     </a>
                 </div>
+				<!--
                 <ul class="main-nav">
                     <li class="nav-item active">
                         <a href="#">{{ strtoupper(trans('sentence.about_us')) }}</a>
@@ -109,8 +107,7 @@
                             <a class="dropdown-item " id="esLocale" data-locale="es" href="{{ route('lang2',['locale'=>'es']) }}">{{ strtoupper(trans('sentence.signup.spain')) }}</a>
                         </div>
                     </li>
-                </ul>
-
+                </ul>-->
             </div>
 
         </nav>
