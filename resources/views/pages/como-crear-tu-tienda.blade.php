@@ -59,7 +59,7 @@
 	  
 	  <div class="ButtonRegister">
       <div class="reg-button">
-        <p><a href="http://www.cercademi.me/bus/signup">
+        <p><a href="{{route('bus/signup')}}">
           <input type="submit" class="btn takfua-back btn-block radius-0 main-shadwo text-white" name="btnregister" value="Regístrate" />
         </a></p>
       </div>
