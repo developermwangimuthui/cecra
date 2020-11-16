@@ -80,13 +80,13 @@
           </tr>
         <tr>
           <td height="82" style="text-align: left"><h6 style="text-decoration-color: black">Electrodomésticos, Tecnología y electrónicos </h6></td>
-          <td style="text-decoration-color: black"><h6>10%</h6></td>
-          <td style="text-decoration-color: black"><h6>15%</h6></td>
+          <td style="text-align: center"><h6>10%</h6></td>
+          <td style="text-align: center"><h6>15%</h6></td>
           </tr>
         <tr>
           <td height="79" style="text-align: left"><h6 style="text-decoration-color: black">Perfumes, Cosméticos, Ropa, Juguetes, Relojes y otros</h6></td>
-          <td style="text-decoration-color: black"><h6>15%  </h6></td>
-          <td style="text-decoration-color: black"><h6>20% </h6></td>
+          <td style="text-align: center"><h6>15%  </h6></td>
+          <td style="text-align: center"><h6>20% </h6></td>
         </tr>
         </tbody>
     </table>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pagecontroller;
+use App\Http\Controllers\Pages1controller;
 use App\Http\Controllers\Shopcontroller;
 use App\Http\Controllers\RestaurantPortal\RestaurantController;
 use App\Http\Controllers\Usercontroller;
@@ -196,19 +197,21 @@ Route::prefix('restaurantportal')->group(function() {
 });
 
 Route::get('/como-crear-tu-tienda', [
-    \App\Http\Controllers\Pagecontroller::class, 'ComoCrearTuTienda'
+    \App\Http\Controllers\Pages1controller::class, 'ComoCrearTuTienda'
 ])->name('como-crear-tu-tienda');
 
 Route::get('/terminos-y-condiciones-negocios', [
-    \App\Http\Controllers\Pagecontroller::class, 'TerminosYCondicionesNegocios'
+    \App\Http\Controllers\Pages1controller::class, 'TerminosYCondicionesNegocios'
 ])->name('terminos-y-condiciones-negocios');
 
+
+
 Route::get('/politica-de-privacidad', [
-    \App\Http\Controllers\Pagecontroller::class, 'PoliticaDePrivacidad'
+    \App\Http\Controllers\Pages1controller::class, 'PoliticaDePrivacidad'
 ])->name('politica-de-privacidad');
 
 Route::get('/politica-de-cookies', [
-    \App\Http\Controllers\Pagecontroller::class, 'PoliticaDeCookies'
+    \App\Http\Controllers\Pages1controller::class, 'PoliticaDeCookies'
 ])->name('politica-de-cookies');
 
 Route::get('/how-to-create-your-business', [
@@ -217,7 +220,7 @@ Route::get('/how-to-create-your-business', [
 
 
 Route::get('/seccion-en-construccion', [
-    \App\Http\Controllers\Pagecontroller::class, 'SeccionEnConstruccion'
+    \App\Http\Controllers\Pages1controller::class, 'SeccionEnConstruccion'
 ])->name('seccion-en-construccion');
 // password reset
 

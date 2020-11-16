@@ -29,12 +29,12 @@
                         <ul>
                             <li><a href="{{ route('bus/signup') }}"><i ></i>{{ trans('sentence.footer.createYourBusiness') }}</a></li>
                             <li><a href="{{ route('bus/signin') }}"><i ></i>{{ trans('sentence.footer.signInForBusiness') }}</a></li>
-                            <li><a href="{{ route('how-to-create-your-business') }}"><i ></i>
+                            <li><a href="{{ route('como-crear-tu-tienda') }}"><i ></i>
                                     {{ trans('sentence.footer.howToCreateYourBusiness') }}
                                 </a>
                             </li>
 
-                            <li><i ></i> {{ trans('sentence.footer.pricing') }}</li>
+                            <li><i ></i> <a href="{{ route('como-crear-tu-tienda') }}">{{ trans('sentence.footer.pricing') }}</a></li>
                         </ul>
                     </div>
                     <!-- /Footer Widget -->
@@ -47,11 +47,11 @@
                     <div class="footer-widget footer-menu">
                         <h2 class="footer-title">{{ trans('sentence.footer.categories') }}</h2>
                         <ul>
-                            <li><i ></i> {{ trans('sentence.footer.clothes') }}</li>
-                            <li><i ></i> {{ trans('sentence.footer.electronics') }}</li>
-                            <li><i ></i> {{ trans('sentence.footer.gaming') }}</li>
-                            <li><i ></i> {{ trans('sentence.footer.computing') }}</li>
-                            <li><i ></i>{{ trans('sentence.footer.moreCategories') }}</li>
+                            <li><i ></i> <a href="{{route('seccion-en-construccion')}}">{{ trans('sentence.footer.clothes') }}</a></li>
+                            <li><i ></i> <a href="{{route('seccion-en-construccion')}}">{{ trans('sentence.footer.electronics') }}</a></li>
+                            <li><i ></i><a href="{{route('seccion-en-construccion')}}"> {{ trans('sentence.footer.gaming') }}</a></li>
+                            <li><i ></i><a href="{{route('seccion-en-construccion')}}"> {{ trans('sentence.footer.computing') }}</a></li>
+                            <li><i ></i><a href="{{route('seccion-en-construccion')}}">{{ trans('sentence.footer.moreCategories') }}</a></li>
                         </ul>
                     </div>
                     <!-- /Footer Widget -->
@@ -95,7 +95,10 @@
                         <!-- Copyright Menu -->
                         <div class="copyright-menu">
                             <ul class="policy-menu">
-                                <li><a href="term-condition.html">{{ trans('sentence.footer.copyright') }} ©</a></li>
+                                <li>{{ trans('sentence.footer.copyright') }} ©</li>
+								<li><a href="{{route('politica-de-privacidad')}}">{{ trans('sentence.footer.privacypolicy') }}</a></li>
+								<li><a href="{{route('politica-de-cookies')}}">{{ trans('sentence.footer.cookiespolicy') }}</a></li>
+								<li><a href="{{route('terminos-y-condiciones-negocios')}}">{{ trans('sentence.footer.termsbusiness') }}</a></li>
                              
                             </ul>
                         </div>
